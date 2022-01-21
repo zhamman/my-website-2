@@ -2,8 +2,9 @@ let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 let subTitle = document.querySelector('.sub-title');
-const hamburger = document.querySelector('#hamburger');
-const navUL = document.querySelector('#nav');
+let subLink = document.querySelector(".sub a")
+// const hamburger = document.querySelector('#hamburger');
+// const navUL = document.querySelector('#nav');
 
 
 // Opening page animation 
@@ -38,9 +39,34 @@ window.addEventListener('DOMContentLoaded', ()=>{
 setTimeout(function(){
     subTitle.style.visibility = 'visible'; 
 }, 4200);
+
+setTimeout(function(){
+    subLink.style.visibility = 'visible'; 
+}, 4200);
  
 //  Hamburger menu
 
-hamburger.addEventListener('click', () => {
-    navUL.classList.toggle('show');
-});
+// hamburger.addEventListener('click', () => {
+//     navUL.classList.toggle('show');
+// });
+
+const navSlide = () => {
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav li');
+
+
+    burger.addEventListener('click', () =>{
+        nav.classList.toggle('nav-active')
+    });
+
+    navLinks.forEach((link, index)=>{
+        link.style.animation = `navLinkFade 2s ease forwards ${index/ 7 + 2}s`
+    })
+}
+
+navSlide()
+
+// hamburger.addEventListener('click', () =>{
+//     navUL.classList('.nav-active')
+// });
