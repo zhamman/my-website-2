@@ -320,7 +320,7 @@ html {
 }
 
 .project-page {
-  height: 100vh;
+  height: 140vh;
   background-color: #161616;
   color: white;
 }
@@ -348,8 +348,8 @@ html {
 
 .project-page #projects .square {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -471,7 +471,7 @@ html {
 .contact-page .contact-container {
   max-width: 1280;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 2rem 32px;
   overflow: none;
 }
 
@@ -637,7 +637,11 @@ html {
   .front-page #svg-logo {
     width: 400px;
   }
-  .project-page .content .project-title {
+  .project-page #projects .square {
+    width: 300px;
+    height: 300px;
+  }
+  .project-page #projects .square .content .project-title {
     font-size: 1.2rem;
   }
   .contact-page .contact-container h1 {
@@ -679,6 +683,9 @@ html {
 }
 
 @media all and (max-width: 600px) {
+  .project-page {
+    height: 180vh;
+  }
   .project-page .project-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -689,6 +696,10 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .project-page .project-container #projects {
     display: -webkit-box;
@@ -699,8 +710,12 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .project-page .title {
-    padding: 0;
+  .project-page .project-container #projects .square {
+    width: 300px;
+    height: 300px;
+  }
+  .project-page .project-container #projects .square .content .project-title {
+    font-size: 1.2rem;
   }
   .contact-page .contact-container {
     padding-top: 5rem;
@@ -714,23 +729,9 @@ html {
   .front-page #svg-logo {
     width: 300px;
   }
-  .project-page {
-    height: 200vh;
-  }
-  .project-page .project-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .project-page .square {
+    height: 200px;
+    width: 200px;
   }
 }
 
