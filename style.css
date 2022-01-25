@@ -243,6 +243,11 @@ html {
           animation: fadeOut ease 2s 4s;
 }
 
+.front-page .sub a:hover {
+  background: #3b3b3b;
+  color: #fff;
+}
+
 @-webkit-keyframes dash {
   to {
     stroke-dashoffset: 0;
@@ -320,13 +325,27 @@ html {
 }
 
 .project-page {
-  height: 140vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
   background-color: #161616;
   color: white;
 }
 
 .project-page .title {
   padding: 1rem;
+  text-decoration: underline;
   font-family: 'Vujahday Script', cursive;
   font-weight: 100;
   font-size: 2.5rem;
@@ -348,8 +367,8 @@ html {
 
 .project-page #projects .square {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,6 +482,19 @@ html {
 }
 
 .contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
   background-color: #161616;
   color: white;
@@ -574,7 +606,7 @@ html {
   }
 }
 
-@media all and (min-width: 1080px) {
+@media all and (min-width: 2040px) {
   .intro .logo {
     font-size: 3rem;
   }
@@ -594,6 +626,9 @@ html {
     margin-top: 1rem;
     font-size: 1.5rem;
   }
+}
+
+@media all and (min-width: 1080px) {
   .project-page .title {
     padding-top: 1rem;
     font-size: 2rem;

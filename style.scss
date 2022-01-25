@@ -209,6 +209,11 @@ $main-bg-color:#161616;
             border-radius: 10px;
             margin-top: 0.4rem;
             animation: fadeOut ease 2s 4s;
+
+            &:hover{
+                background: rgb(59, 59, 59);
+                color: #fff;
+            }
         }
     }
 }
@@ -255,12 +260,17 @@ $main-bg-color:#161616;
 // Project section 
 
 .project-page{
-    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
     background-color: $main-bg-color;
     color: white;
 
     .title{
         padding: 1rem;
+        text-decoration: underline;
         font-family: 'Vujahday Script', cursive;
         font-weight: 100;
         font-size: 2.5rem;
@@ -276,8 +286,8 @@ $main-bg-color:#161616;
 
         .square{
             position: relative;
-            width: 350px;
-            height: 350px;
+            width: 300px;
+            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -362,6 +372,10 @@ $main-bg-color:#161616;
 // Contact Page
 
 .contact-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: $main-bg-color;
     color: white;
@@ -473,7 +487,9 @@ $main-bg-color:#161616;
     }
 }
 
-@media all and (min-width: 1080px){
+
+@media all and (min-width: 2040px){
+
     .intro{
         .logo{
             font-size: 3rem;
@@ -504,7 +520,9 @@ $main-bg-color:#161616;
         }
 
     }
+}
 
+@media all and (min-width: 1080px){
     .project-page{
         .title{
             padding-top: 1rem;
