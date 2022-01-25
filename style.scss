@@ -61,15 +61,6 @@ $main-bg-color:#161616;
     height: 100vh;
     width: 100%;
 
-    // h1{
-    //     position: absolute;
-    //     top: 60%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     color: white;
-    //     animation: fadeIn ease 2s 4s;
-    // }
-    
     // Header section
 
     .header {
@@ -483,16 +474,51 @@ $main-bg-color:#161616;
 }
 
 @media all and (min-width: 1080px){
-    .contact-page {
-        .contact-container{
-            padding: 0 128px;   
+    .intro{
+        .logo{
+            font-size: 3rem;
         }
     }
+
+    .front-page{
+        .header{
+            .mini_logo{
+                font-size: 2.3rem;
+            }
+            li a{
+                font-size: 2rem;
+            }
+            .fa-github{
+                font-size: 2rem;
+            }
+
+        }
+
+        #svg-logo{
+            width: 1000px;
+        }
+
+        .sub{
+            margin-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+    }
+
     .project-page{
         .title{
             padding-top: 1rem;
+            font-size: 2rem;
         }
     }
+    
+    .contact-page {
+        .contact-container{
+            padding: 0 128px;
+            max-width: 2000px;   
+        }
+    }
+    
 }
 
 @media all and (max-width: 768px){

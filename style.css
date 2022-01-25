@@ -575,11 +575,32 @@ html {
 }
 
 @media all and (min-width: 1080px) {
-  .contact-page .contact-container {
-    padding: 0 128px;
+  .intro .logo {
+    font-size: 3rem;
+  }
+  .front-page .header .mini_logo {
+    font-size: 2.3rem;
+  }
+  .front-page .header li a {
+    font-size: 2rem;
+  }
+  .front-page .header .fa-github {
+    font-size: 2rem;
+  }
+  .front-page #svg-logo {
+    width: 1000px;
+  }
+  .front-page .sub {
+    margin-top: 1rem;
+    font-size: 1.5rem;
   }
   .project-page .title {
     padding-top: 1rem;
+    font-size: 2rem;
+  }
+  .contact-page .contact-container {
+    padding: 0 128px;
+    max-width: 2000px;
   }
 }
 
