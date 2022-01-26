@@ -297,16 +297,12 @@ $red-clr: orangered;
         padding: 1rem;
         // text-decoration: underline;
         font-weight: 100;
-        font-size: 2.5rem;
+        font-size: 1.6rem;
         text-align: center;
         padding-top: 4rem;
         // color: $red-clr;
         .red{
             color: $red-clr;
-        }
-
-        .yellow{
-            // color: $yellow-clr;
         }
     }
 
@@ -323,7 +319,7 @@ $red-clr: orangered;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 1rem 2rem;
+            margin: 2rem 2rem;
             // cursor: pointer;
 
     
@@ -430,7 +426,7 @@ $red-clr: orangered;
 // About Me section 
 
 .about-me-section{
-    height: 50vh;
+    height: 80vh;
     background: $main-bg-color;
     color: #fff;
     display: flex;
@@ -438,7 +434,7 @@ $red-clr: orangered;
     align-items: center;
 
     .about-me-container{
-        max-width: 1000px;
+        width: 80%;
         margin: auto;
         padding: 3rem;
 
@@ -651,6 +647,52 @@ $red-clr: orangered;
         }
 
     }
+
+    .project-page{
+        .title{
+            font-size: 3rem;
+        }
+        #projects{
+            .square{
+                width: 500px;
+                height: 500px;
+            }
+        }
+    }
+
+    .about-me-section{
+        .about-me-container{
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    
+    .contact-page {
+        .contact-container{
+            padding: 0 128px;
+            max-width: 2000px;   
+
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.6rem;
+            }
+
+            .form-group{
+                label{
+                    font-size: 1.6rem;
+                }
+                input{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
 }
 
 @media all and (min-width: 1080px){
@@ -660,14 +702,6 @@ $red-clr: orangered;
             font-size: 2rem;
         }
     }
-    
-    .contact-page {
-        .contact-container{
-            padding: 0 128px;
-            max-width: 2000px;   
-        }
-    }
-    
 }
 
 @media all and (max-width: 768px){
@@ -723,14 +757,20 @@ $red-clr: orangered;
     .project-page{
         #projects{
             .square{
-                width: 300px;
-                height: 300px;
+                width: 280px;
+                height: 280px;
                 .content{
                     .project-title{
                         font-size: 1.2rem;
                     }
                 }
             }
+        }
+    }
+
+    .about-me-section{
+        .about-me-container{
+            width: 100%;
         }
     }
 
@@ -780,8 +820,8 @@ $red-clr: orangered;
                 flex-direction: column;
 
                 .square{
-                    width: 300px;
-                    height: 300px;
+                    width: 250px;
+                    height: 250px;
                     .content{
                         .project-title{
                             font-size: 1.2rem;
