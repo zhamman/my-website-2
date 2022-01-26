@@ -11,8 +11,9 @@ html {
 }
 
 .front-page {
+  padding-bottom: 4rem;
   background: #161616;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -131,25 +132,29 @@ html {
   color: #d8d8d8;
 }
 
-.front-page .project-header h1 {
-  padding: 0.6rem;
+.front-page .project-header .text-container {
+  max-width: 80ch;
+}
+
+.front-page .project-header .text-container h1 {
+  padding: 2rem 0.6rem 2rem 0.6rem;
   font-size: 2rem;
   padding-bottom: 1.4rem;
 }
 
-.front-page .project-header p {
+.front-page .project-header .text-container p {
   padding: 0.6rem;
 }
 
-.front-page .project-header p .pre-text {
+.front-page .project-header .text-container p .pre-text {
   color: #7c7c7c;
 }
 
-.front-page .project-header p .red {
+.front-page .project-header .text-container p .red {
   color: orangered;
 }
 
-.front-page .project-header p .stack {
+.front-page .project-header .text-container p .stack {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,8 +163,16 @@ html {
           justify-content: start;
 }
 
-.front-page .project-header p a {
+.front-page .project-header .text-container p a {
   color: #d9ff00;
+}
+
+.front-page .project-header .text-container .project-pic {
+  margin-top: 0.6rem;
+  margin-left: 0.6rem;
+  height: 500px;
+  border: 6px solid white;
+  max-width: 80ch;
 }
 
 @media all and (min-width: 2040px) {

@@ -18,8 +18,9 @@ $red-clr: orangered;
 // Welcoming page
 
 .front-page{
+    padding-bottom: 4rem;
     background: #161616;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     // Header section
@@ -115,27 +116,38 @@ $red-clr: orangered;
         padding-top: 3rem;
         color: rgb(216, 216, 216);
 
-        h1{
-            padding: 0.6rem;
-            font-size: 2rem;
-            padding-bottom: 1.4rem
-        }
-        p{  
-            padding: 0.6rem;
-            .pre-text{
-                color: rgb(124, 124, 124);
+        .text-container{
+            max-width: 80ch;
+            h1{
+                padding: 2rem 0.6rem 2rem 0.6rem;
+                font-size: 2rem;
+                padding-bottom: 1.4rem
             }
-            .red{
-                color: $red-clr;
-            }
-            .stack{
-                display: flex;
-                justify-content: start;
+            p{  
+                padding: 0.6rem;
+                .pre-text{
+                    color: rgb(124, 124, 124);
+                }
+                .red{
+                    color: $red-clr;
+                }
+                .stack{
+                    display: flex;
+                    justify-content: start;
+                }
+
+                a{
+                    // text-decoration: none;
+                    color: $yellow-clr;
+                }
             }
 
-            a{
-                // text-decoration: none;
-                color: $yellow-clr;
+            .project-pic{
+                margin-top: 0.6rem;
+                margin-left: 0.6rem;
+                height: 500px;
+                border: 6px solid white;
+                max-width: 80ch;
             }
         }
     }
