@@ -6,7 +6,6 @@ let subLink = document.querySelector(".sub a")
 // const hamburger = document.querySelector('#hamburger');
 // const navUL = document.querySelector('#nav');
 
-
 // Opening page animation 
 window.addEventListener('DOMContentLoaded', ()=>{
 
