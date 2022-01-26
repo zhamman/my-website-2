@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 html{
@@ -12,6 +12,8 @@ html{
 // variables
 
 $main-bg-color:#161616;
+$orange-clr: rgb(255, 136, 0);
+$red-clr: orangered;
 
 // intro animation page
 
@@ -38,6 +40,7 @@ $main-bg-color:#161616;
         display: inline-block;
         bottom: -20px;
         opacity: 0;
+        
     }
 
     .logo.active{
@@ -75,20 +78,35 @@ $main-bg-color:#161616;
         .mini_logo{
             display: flex;
             align-items: center;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             cursor: pointer;
         }
 
         ul{
             display: flex;
             list-style: none;
-            
+            .red{
+                color: orangered;
+                
+                &:hover{
+                    color: rgb(247, 168, 139);
+                }
+            }
+
+            .orange{
+                color: $orange-clr;
+                
+                &:hover{
+                    color: rgb(235, 204, 175);
+                }
+            }
         }
 
         li a{
             text-decoration: none;
             margin-left: 20px;
             color: white;
+            
         }
 
         li a:hover{
@@ -198,6 +216,9 @@ $main-bg-color:#161616;
             color: #fff;
             visibility: hidden; 
             animation: fadeIn ease 2s 4s;
+            .red{
+                color: $red-clr;
+            }
         }
         a{
             visibility: hidden;
@@ -205,7 +226,7 @@ $main-bg-color:#161616;
             text-decoration: none;
             padding: 0.5rem;
             border: 1px solid black;
-            background-color: lightgray;
+            background-color: $orange-clr;
             border-radius: 10px;
             margin-top: 0.4rem;
             animation: fadeOut ease 2s 4s;
@@ -271,7 +292,6 @@ $main-bg-color:#161616;
     .title{
         padding: 1rem;
         text-decoration: underline;
-        font-family: 'Vujahday Script', cursive;
         font-weight: 100;
         font-size: 2.5rem;
         text-align: center;
@@ -350,8 +370,7 @@ $main-bg-color:#161616;
                 }
         
                 .project-title{
-                    font-size: 1.6rem;
-                    font-family: 'Vujahday Script', cursive;
+                    font-size: 1.2rem;
                     text-decoration: none;
                 }
             }
@@ -368,6 +387,37 @@ $main-bg-color:#161616;
         transform: rotate(360deg);
     }
 }
+
+// About Me section 
+
+.about-me-section{
+    height: 50vh;
+    background: $main-bg-color;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-me-container{
+        max-width: 1000px;
+        margin: auto;
+        padding: 3rem;
+        
+        p{
+            margin-top: 2rem;
+
+            .orange{
+                color: rgb(255, 136, 0);
+            }
+            .red{
+                color: orangered;
+            }
+        }
+
+    }
+}
+
+
 
 // Contact Page
 
@@ -492,7 +542,7 @@ $main-bg-color:#161616;
 
     .intro{
         .logo{
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
     }
 

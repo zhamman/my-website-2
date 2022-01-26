@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 html {
@@ -82,7 +82,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
@@ -91,6 +91,22 @@ html {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+}
+
+.front-page .header ul .red {
+  color: orangered;
+}
+
+.front-page .header ul .red:hover {
+  color: #f7a88b;
+}
+
+.front-page .header ul .orange {
+  color: #ff8800;
+}
+
+.front-page .header ul .orange:hover {
+  color: #ebccaf;
 }
 
 .front-page .header li a {
@@ -230,13 +246,17 @@ html {
           animation: fadeIn ease 2s 4s;
 }
 
+.front-page .sub .sub-title .red {
+  color: orangered;
+}
+
 .front-page .sub a {
   visibility: hidden;
   color: #000;
   text-decoration: none;
   padding: 0.5rem;
   border: 1px solid black;
-  background-color: lightgray;
+  background-color: #ff8800;
   border-radius: 10px;
   margin-top: 0.4rem;
   -webkit-animation: fadeOut ease 2s 4s;
@@ -346,7 +366,6 @@ html {
 .project-page .title {
   padding: 1rem;
   text-decoration: underline;
-  font-family: 'Vujahday Script', cursive;
   font-weight: 100;
   font-size: 2.5rem;
   text-align: center;
@@ -454,8 +473,7 @@ html {
 }
 
 .project-page #projects .square .content .project-title {
-  font-size: 1.6rem;
-  font-family: 'Vujahday Script', cursive;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -479,6 +497,39 @@ html {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.about-me-section {
+  height: 50vh;
+  background: #161616;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-me-section .about-me-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 3rem;
+}
+
+.about-me-section .about-me-container p {
+  margin-top: 2rem;
+}
+
+.about-me-section .about-me-container p .orange {
+  color: #ff8800;
+}
+
+.about-me-section .about-me-container p .red {
+  color: orangered;
 }
 
 .contact-page {
@@ -608,7 +659,7 @@ html {
 
 @media all and (min-width: 2040px) {
   .intro .logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .front-page .header .mini_logo {
     font-size: 2.3rem;
