@@ -485,6 +485,14 @@ html {
   color: orangered;
 }
 
+.project-page #projects .square .content .red {
+  color: orangered;
+}
+
+.project-page #projects .square .content .red:hover {
+  color: #d9ff00;
+}
+
 .project-page #projects .square .content .project-title {
   font-size: 1.2rem;
   text-decoration: none;

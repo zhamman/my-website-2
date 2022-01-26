@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+// variables
+
+$main-bg-color:#161616;
+$yellow-clr: rgb(217, 255, 0);
+$red-clr: orangered;
+
+// Welcoming page
+
+.front-page{
+    padding-bottom: 4rem;
+    background: #161616;
+    height: 100%;
+    width: 100%;
+
+    // Header section
+
+    .header {
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
+        padding: 30px;
+        
+        .mini_logo{
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            .red{
+                color: $red-clr;
+                
+                &:hover{
+                    color: $yellow-clr;
+                }
+            }
+
+            .yellow{
+                color: $yellow-clr;
+                
+                &:hover{
+                    color: $red-clr;
+                }
+            }
+        }
+
+        li a{
+            text-decoration: none;
+            margin-left: 20px;
+            color: white;
+            
+        }
+
+        li a:hover{
+            color: darkgray;
+        }
+
+        .hamburger{
+            display: none;
+            cursor: pointer;
+            
+            div{
+                width: 20px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px;
+            }
+            
+            &:hover{
+                color: darkgray;
+            }
+            
+            &:focus{
+                outline: none;
+            }
+        }
+
+        .social-media a{
+            color: white;
+        }
+    }
+
+    .home-btn{
+        margin-left: 52px;
+
+        a{
+            color: rgb(126, 125, 125);
+
+            &:hover{
+                color: lightgray;
+            }
+        }
+    }
+    .project-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 3rem;
+        color: rgb(216, 216, 216);
+
+        .text-container{
+            max-width: 80ch;
+            h1{
+                padding: 2rem 0.6rem 2rem 0.6rem;
+                font-size: 2rem;
+                padding-bottom: 1.4rem
+            }
+            p{  
+                padding: 0.6rem;
+                .pre-text{
+                    color: rgb(124, 124, 124);
+                }
+                .red{
+                    color: $red-clr;
+                }
+                .stack{
+                    display: flex;
+                    justify-content: start;
+                }
+
+                a{
+                    // text-decoration: none;
+                    color: $yellow-clr;
+                }
+            }
+
+            .project-pic{
+                margin-top: 0.6rem;
+                margin-left: 0.6rem;
+                height: 500px;
+                border: 6px solid white;
+                max-width: 80ch;
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: 2040px){
+
+    .front-page{
+        .header{
+            .mini_logo{
+                font-size: 2.3rem;
+            }
+            li a{
+                font-size: 2rem;
+            }
+            .fa-github{
+                font-size: 2rem;
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    
+    .front-page{  
+
+        .header {
+
+            .hamburger{
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav{
+                position: absolute;
+                right: 0px;
+                height: 87vh;
+                top: 3vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%;
+                transform: translateY(-120%);
+                transition: transform 0.5s ease-in;
+                 
+                li{
+                    opacity: 0;
+                    padding: 20px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .nav-active{
+                transform: translateY(10%);
+            }
+
+            .social-media{
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+

@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+// variables
+
+$main-bg-color:#161616;
+$yellow-clr: rgb(217, 255, 0);
+$red-clr: orangered;
+
+// Welcoming page
+
+.front-page{
+    background: #161616;
+    height: 100vh;
+    width: 100%;
+
+    // Header section
+
+    .header {
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem;
+        padding: 30px;
+        
+        .mini_logo{
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+            .red{
+                color: $red-clr;
+                
+                &:hover{
+                    color: $yellow-clr;
+                }
+            }
+
+            .yellow{
+                color: $yellow-clr;
+                
+                &:hover{
+                    color: $red-clr;
+                }
+            }
+        }
+
+        li a{
+            text-decoration: none;
+            margin-left: 20px;
+            color: white;
+            
+        }
+
+        li a:hover{
+            color: darkgray;
+        }
+
+        .hamburger{
+            display: none;
+            cursor: pointer;
+            
+            div{
+                width: 20px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px;
+            }
+            
+            &:hover{
+                color: darkgray;
+            }
+            
+            &:focus{
+                outline: none;
+            }
+        }
+
+        .social-media a{
+            color: white;
+        }
+    }
+    .home-btn{
+        margin-left: 52px;
+
+        a{
+            color: rgb(126, 125, 125);
+
+            &:hover{
+                color: lightgray;
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: 2040px){
+
+    .front-page{
+        .header{
+            .mini_logo{
+                font-size: 2.3rem;
+            }
+            li a{
+                font-size: 2rem;
+            }
+            .fa-github{
+                font-size: 2rem;
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    
+    .front-page{  
+
+        .header {
+
+            .hamburger{
+                display: block;
+                cursor: pointer;
+            }
+
+            .nav{
+                position: absolute;
+                right: 0px;
+                height: 87vh;
+                top: 3vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                width: 100%;
+                transform: translateY(-120%);
+                transition: transform 0.5s ease-in;
+                 
+                li{
+                    opacity: 0;
+                    padding: 20px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .nav-active{
+                transform: translateY(10%);
+            }
+
+            .social-media{
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
