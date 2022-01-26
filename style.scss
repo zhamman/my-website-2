@@ -385,6 +385,13 @@ $red-clr: orangered;
                         color: $red-clr;
                     }
                 }
+
+                .red {
+                    color: $red-clr;
+                    &:hover{
+                        color: $yellow-clr;
+                    }
+                }
         
                 .project-title{
                     font-size: 1.2rem;
