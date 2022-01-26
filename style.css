@@ -369,11 +369,14 @@ html {
 
 .project-page .title {
   padding: 1rem;
-  text-decoration: underline;
   font-weight: 100;
   font-size: 2.5rem;
   text-align: center;
   padding-top: 4rem;
+}
+
+.project-page .title .red {
+  color: orangered;
 }
 
 .project-page #projects {
@@ -479,10 +482,12 @@ html {
 
 .project-page #projects .square .content .view-project {
   color: #d9ff00;
+  padding: 5px;
 }
 
 .project-page #projects .square .content .view-project:hover {
   color: orangered;
+  font-size: 1.05rem;
 }
 
 .project-page #projects .square .content .red {
@@ -496,6 +501,12 @@ html {
 .project-page #projects .square .content .project-title {
   font-size: 1.2rem;
   text-decoration: none;
+  padding: 5px;
+}
+
+.project-page #projects .square .content .project-title:hover {
+  color: #9b9b9b;
+  font-size: 1.3rem;
 }
 
 @-webkit-keyframes animate {
@@ -539,6 +550,18 @@ html {
   max-width: 1000px;
   margin: auto;
   padding: 3rem;
+}
+
+.about-me-section .about-me-container h1 {
+  font-size: 1.6rem;
+}
+
+.about-me-section .about-me-container h1 .yellow {
+  color: #d9ff00;
+}
+
+.about-me-section .about-me-container h1 .yellow:hover {
+  color: orangered;
 }
 
 .about-me-section .about-me-container p {
@@ -627,6 +650,22 @@ html {
   display: block;
   margin-bottom: 5px;
   color: lightgray;
+}
+
+.contact-page .contact-container form .form-group label .yellow {
+  color: #d9ff00;
+}
+
+.contact-page .contact-container form .form-group label .yellow:hover {
+  color: orangered;
+}
+
+.contact-page .contact-container form .form-group label .red {
+  color: orangered;
+}
+
+.contact-page .contact-container form .form-group label .red:hover {
+  color: #d9ff00;
 }
 
 .contact-page .contact-container form .form-group .form-element {

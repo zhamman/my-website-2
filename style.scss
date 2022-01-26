@@ -295,12 +295,19 @@ $red-clr: orangered;
 
     .title{
         padding: 1rem;
-        text-decoration: underline;
+        // text-decoration: underline;
         font-weight: 100;
         font-size: 2.5rem;
         text-align: center;
         padding-top: 4rem;
         // color: $red-clr;
+        .red{
+            color: $red-clr;
+        }
+
+        .yellow{
+            // color: $yellow-clr;
+        }
     }
 
     #projects{
@@ -380,9 +387,11 @@ $red-clr: orangered;
 
                 .view-project{
                     color: $yellow-clr;
+                    padding: 5px;
 
                     &:hover{
                         color: $red-clr;
+                        font-size: 1.05rem;
                     }
                 }
 
@@ -396,6 +405,12 @@ $red-clr: orangered;
                 .project-title{
                     font-size: 1.2rem;
                     text-decoration: none;
+                    padding: 5px;
+
+                    &:hover{
+                        color: rgb(155, 155, 155);
+                        font-size: 1.3rem;
+                    }
                 }
             }
         }
@@ -426,6 +441,16 @@ $red-clr: orangered;
         max-width: 1000px;
         margin: auto;
         padding: 3rem;
+
+        h1{
+            font-size: 1.6rem;
+            .yellow{
+                color: $yellow-clr;
+                &:hover{
+                    color: $red-clr;
+                }
+            }
+        }
         
         p{
             margin-top: 2rem;
@@ -473,6 +498,9 @@ $red-clr: orangered;
             text-transform: uppercase;
             text-align: center;
             margin-bottom: 1rem;
+            // .yellow{
+            //     color: $yellow-clr;
+            // }
         }
 
         p{
@@ -504,6 +532,20 @@ $red-clr: orangered;
                     display: block;
                     margin-bottom: 5px;
                     color: lightgray;
+
+                    .yellow {
+                        color: $yellow-clr;
+
+                        &:hover{
+                            color: $red-clr;
+                        }
+                    }
+                    .red{
+                        color: $red-clr;
+                        &:hover{
+                            color: $yellow-clr;
+                        }
+                    }
                 }
 
                 .form-element{
