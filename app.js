@@ -3,8 +3,6 @@ let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 let subTitle = document.querySelector('.sub-title');
 let subLink = document.querySelector(".sub a")
-// const hamburger = document.querySelector('#hamburger');
-// const navUL = document.querySelector('#nav');
 
 // Opening page animation 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -45,10 +43,6 @@ setTimeout(function(){
  
 //  Hamburger menu
 
-// hamburger.addEventListener('click', () => {
-//     navUL.classList.toggle('show');
-// });
-
 const navSlide = () => {
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
@@ -57,11 +51,10 @@ const navSlide = () => {
 
     burger.addEventListener('click', () =>{
         nav.classList.toggle('nav-active')
+        navLinks.forEach((link, idx)=>{
+            link.style.animation = `navLinkFade 1s ease forwards ${idx/ 7 + 1}s`
+        })
     });
-
-    navLinks.forEach((link, index)=>{
-        link.style.animation = `navLinkFade 2s ease forwards ${index/ 7 + 2}s`
-    })
 }
 
 navSlide()
