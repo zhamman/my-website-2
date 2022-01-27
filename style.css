@@ -143,6 +143,10 @@ html {
   color: white;
 }
 
+.front-page .header .social-media a i:hover {
+  color: orangered;
+}
+
 .front-page #svg-logo {
   position: absolute;
   top: 50%;
@@ -547,6 +551,7 @@ html {
 }
 
 .about-me-section .about-me-container {
+  text-align: center;
   width: 80%;
   margin: auto;
   padding: 3rem;
@@ -582,7 +587,7 @@ html {
 
 .about-me-section .about-me-container p .red:hover {
   color: orangered;
-  font-size: 1.1rem;
+  text-decoration: underline;
 }
 
 .contact-page {
@@ -763,6 +768,7 @@ html {
   }
   .about-me-section .about-me-container h1 {
     font-size: 3rem;
+    text-align: center;
   }
   .about-me-section .about-me-container p {
     font-size: 1.6rem;
@@ -803,8 +809,8 @@ html {
   .front-page .header .nav {
     position: absolute;
     right: 0px;
-    height: 87vh;
-    top: 3vh;
+    height: 25vh;
+    top: 8vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -816,12 +822,13 @@ html {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    -webkit-transform: translateY(-120%);
-            transform: translateY(-120%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    background-color: #1b1b1b;
   }
   .front-page .header .nav li {
     opacity: 0;
@@ -837,8 +844,8 @@ html {
             justify-content: center;
   }
   .front-page .header .nav-active {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   .front-page .header .social-media {
     display: none;
@@ -871,26 +878,26 @@ html {
 @-webkit-keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
