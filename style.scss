@@ -106,11 +106,9 @@ $red-clr: orangered;
             text-decoration: none;
             margin-left: 20px;
             color: white;
-            
-        }
-
-        li a:hover{
-            color: darkgray;
+            &:hover{
+                color: darkgray;
+            }
         }
 
         .hamburger{
@@ -118,16 +116,17 @@ $red-clr: orangered;
             cursor: pointer;
             
             div{
-                width: 20px;
-                height: 3px;
+                width: 16px;
+                height: 2px;
                 background-color: #fff;
                 margin: 5px;
+
             }
             
             &:hover{
-                color: darkgray;
+                color: $red-clr;
             }
-            
+
             &:focus{
                 outline: none;
             }
@@ -135,11 +134,7 @@ $red-clr: orangered;
 
         .social-media a{
             color: white;
-            i{
-                &:hover {
-                    color: $red-clr;
-                }
-            }
+        
         }
     }
 
@@ -238,7 +233,7 @@ $red-clr: orangered;
             background-color: lightgray;
             border-radius: 10px;
             margin-top: 0.4rem;
-            animation: fadeOut ease 2s 4s;
+            transition: 0.2s linear;
 
             &:hover{
                 background: rgb(83, 83, 83);
@@ -379,11 +374,27 @@ $red-clr: orangered;
                 align-items: center;
                 flex-direction: column;
                 z-index: 99;
+
+                &:hover{
+                    img{
+                        visibility: visible;
+                        z-index: -1;
+                        animation: pic 1s linear;
+                    }
+                }
         
                 a{
                     text-decoration: none;
                     color: white;
 
+                }
+
+                img{
+                    visibility: hidden;
+                    height: 100px;
+                    position: absolute;
+                    border: 1px solid white;
+                    z-index: 0;
                 }
 
                 .view-project{
@@ -392,7 +403,6 @@ $red-clr: orangered;
 
                     &:hover{
                         color: $red-clr;
-                        font-size: 1.05rem;
                     }
                 }
 
@@ -410,11 +420,33 @@ $red-clr: orangered;
 
                     &:hover{
                         color: rgb(155, 155, 155);
-                        font-size: 1.3rem;
                     }
                 }
             }
         }
+    }
+}
+
+// @keyframes zoom{
+//     from{
+//         transform: scale(0.8);
+//     }
+//     to{
+//         transform: scale(1)
+//     }
+// }
+
+@keyframes pic{
+    from{
+        width: 0%;
+        height: 0%;
+        transform: rotate(180deg)
+    }
+    
+    to{
+        width: 65%;
+        height: 35%;
+        transform: rotate(0deg)
     }
 }
 
@@ -720,37 +752,57 @@ $red-clr: orangered;
 
         .header {
 
-            .hamburger{
-                display: block;
-                cursor: pointer;
-            }
+            nav{
 
-            .nav{
-                position: absolute;
-                right: 0px;
-                height: 25vh;
-                top: 8vh;
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-                width: 100%;
-                transform: translateX(-100%);
-                transition: transform 0.5s ease-in;
-                background-color: rgb(27, 27, 27);
-                 
-                li{
-                    opacity: 0;
-                    padding: 20px;
+                .hamburger{
+                    display: block;
+                    cursor: pointer;
+                    transition: all 0.4s ease-in;
+
+                    .line{
+                        transition: all 0.4s ease;
+                    }
+
+                    .line.turn{
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .hamburger.rotate{
+                    transform: rotate(90deg);
+                    
+                }
+
+                
+
+                .nav{
+                    position: absolute;
+                    right: 0px;
+                    height: 25vh;
+                    top: 8vh;
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center; 
+                    width: 100%;
+                    transform: translateX(-100%);
+                    transition: transform 0.5s ease-in;
+                    // background-color: rgb(27, 27, 27);
+                    
+                    li{
+                        opacity: 0;
+                        padding: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    
+                }
+
+                .nav-active{
+                    transform: translateX(0%);
                 }
             }
-
-            .nav-active{
-                transform: translateX(0%);
-            }
-
             .social-media{
                 display: none;
             }
@@ -798,17 +850,6 @@ $red-clr: orangered;
                 }
             }
         }
-    }
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
     }
 }
 
@@ -893,5 +934,16 @@ $red-clr: orangered;
         #svg-logo{
             width: 200px;
         }
+    }
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

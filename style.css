@@ -125,14 +125,14 @@ html {
 }
 
 .front-page .header .hamburger div {
-  width: 20px;
-  height: 3px;
+  width: 16px;
+  height: 2px;
   background-color: #fff;
   margin: 5px;
 }
 
 .front-page .header .hamburger:hover {
-  color: darkgray;
+  color: orangered;
 }
 
 .front-page .header .hamburger:focus {
@@ -141,10 +141,6 @@ html {
 
 .front-page .header .social-media a {
   color: white;
-}
-
-.front-page .header .social-media a i:hover {
-  color: orangered;
 }
 
 .front-page #svg-logo {
@@ -267,8 +263,8 @@ html {
   background-color: lightgray;
   border-radius: 10px;
   margin-top: 0.4rem;
-  -webkit-animation: fadeOut ease 2s 4s;
-          animation: fadeOut ease 2s 4s;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .front-page .sub a:hover {
@@ -479,9 +475,24 @@ html {
   z-index: 99;
 }
 
+.project-page #projects .square .content:hover img {
+  visibility: visible;
+  z-index: -1;
+  -webkit-animation: pic 1s linear;
+          animation: pic 1s linear;
+}
+
 .project-page #projects .square .content a {
   text-decoration: none;
   color: white;
+}
+
+.project-page #projects .square .content img {
+  visibility: hidden;
+  height: 100px;
+  position: absolute;
+  border: 1px solid white;
+  z-index: 0;
 }
 
 .project-page #projects .square .content .view-project {
@@ -491,7 +502,6 @@ html {
 
 .project-page #projects .square .content .view-project:hover {
   color: orangered;
-  font-size: 1.05rem;
 }
 
 .project-page #projects .square .content .red {
@@ -510,7 +520,36 @@ html {
 
 .project-page #projects .square .content .project-title:hover {
   color: #9b9b9b;
-  font-size: 1.3rem;
+}
+
+@-webkit-keyframes pic {
+  from {
+    width: 0%;
+    height: 0%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    width: 65%;
+    height: 35%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes pic {
+  from {
+    width: 0%;
+    height: 0%;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    width: 65%;
+    height: 35%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 @-webkit-keyframes animate {
@@ -802,11 +841,25 @@ html {
   .front-page h1 {
     font-size: 1.5rem;
   }
-  .front-page .header .hamburger {
+  .front-page .header nav .hamburger {
     display: block;
     cursor: pointer;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
   }
-  .front-page .header .nav {
+  .front-page .header nav .hamburger .line {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .front-page .header nav .hamburger .line.turn {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .front-page .header nav .hamburger.rotate {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  .front-page .header nav .nav {
     position: absolute;
     right: 0px;
     height: 25vh;
@@ -828,9 +881,8 @@ html {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    background-color: #1b1b1b;
   }
-  .front-page .header .nav li {
+  .front-page .header nav .nav li {
     opacity: 0;
     padding: 20px;
     display: -webkit-box;
@@ -843,7 +895,7 @@ html {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .front-page .header .nav-active {
+  .front-page .header nav .nav-active {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -872,32 +924,6 @@ html {
   }
   .contact-page .contact-container .form-group .submit-group input[type="submit"] {
     padding: 0.4rem 0.5rem;
-  }
-}
-
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
   }
 }
 
@@ -975,6 +1001,32 @@ html {
   }
   .front-page #svg-logo {
     width: 200px;
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
