@@ -2,7 +2,7 @@ let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 let subTitle = document.querySelector('.sub-title');
-let subLink = document.querySelector(".sub a")
+let subLink = document.querySelector(".sub a");
 
 // Opening page animation 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -41,24 +41,40 @@ setTimeout(function(){
     subLink.style.visibility = 'visible'; 
 }, 4200);
  
-//  Hamburger menu
+//  Hamburger menu fade in
 
 const navSlide = () => {
     const burger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav');
     const navLinks = document.querySelectorAll('.nav li');
-
+    const line2 = document.querySelector(".hamburger .line2");
 
     burger.addEventListener('click', () =>{
-        nav.classList.toggle('nav-active')
+        line2.classList.toggle("turn")
+        burger.classList.toggle("rotate");
+        nav.classList.toggle('nav-active');
         navLinks.forEach((link, idx)=>{
-            link.style.animation = `navLinkFade 1s ease forwards ${idx/ 7 + 1}s`
-        })
+            link.style.animation = `navLinkFade 0.3s ease forwards ${idx/ 7 + 0.3}s`
+        });
     });
 }
 
 navSlide()
 
-// hamburger.addEventListener('click', () =>{
-//     navUL.classList('.nav-active')
-// });
+
+
+// function moveImg(e) {
+//     const x = e.clientX;
+//     const y = e.clientY;
+//     const img = document.querySelector(".project-img");
+//     const content = document.querySelector(".content");
+
+//     content.addEventListener('mouseover', () =>{
+//     img.style.left = x+'px';
+//     img.style.top = y+'px';
+
+//     console.log(e.clientX)
+//     });
+// }
+
+
