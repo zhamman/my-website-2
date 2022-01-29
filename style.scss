@@ -134,7 +134,9 @@ $red-clr: orangered;
 
         .social-media a{
             color: white;
-        
+            &:hover{
+                color: $red-clr;
+            }
         }
     }
 
@@ -234,6 +236,7 @@ $red-clr: orangered;
             border-radius: 10px;
             margin-top: 0.4rem;
             transition: 0.2s linear;
+            font-weight: 800;
 
             &:hover{
                 background: rgb(83, 83, 83);
@@ -379,7 +382,7 @@ $red-clr: orangered;
                     img{
                         visibility: visible;
                         z-index: -1;
-                        animation: pic 1s linear;
+                        animation: pic 0.5s linear;
                     }
                 }
         

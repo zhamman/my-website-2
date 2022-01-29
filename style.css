@@ -143,6 +143,10 @@ html {
   color: white;
 }
 
+.front-page .header .social-media a:hover {
+  color: orangered;
+}
+
 .front-page #svg-logo {
   position: absolute;
   top: 50%;
@@ -265,6 +269,7 @@ html {
   margin-top: 0.4rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
+  font-weight: 800;
 }
 
 .front-page .sub a:hover {
@@ -478,8 +483,8 @@ html {
 .project-page #projects .square .content:hover img {
   visibility: visible;
   z-index: -1;
-  -webkit-animation: pic 1s linear;
-          animation: pic 1s linear;
+  -webkit-animation: pic 0.5s linear;
+          animation: pic 0.5s linear;
 }
 
 .project-page #projects .square .content a {
