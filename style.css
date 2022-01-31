@@ -857,8 +857,8 @@ html {
     transition: all 0.4s ease;
   }
   .front-page .header nav .hamburger .line.turn {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    -webkit-transform: rotate(280deg);
+            transform: rotate(280deg);
   }
   .front-page .header nav .hamburger.rotate {
     -webkit-transform: rotate(90deg);

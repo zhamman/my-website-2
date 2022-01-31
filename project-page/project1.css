@@ -84,8 +84,8 @@ html {
 }
 
 .front-page .header .hamburger div {
-  width: 20px;
-  height: 3px;
+  width: 16px;
+  height: 2px;
   background-color: #fff;
   margin: 5px;
 }
@@ -169,7 +169,7 @@ html {
 .front-page .project-header .text-container .project-pic {
   margin-top: 0.6rem;
   margin-left: 0.6rem;
-  height: 500px;
+  max-height: 500px;
   border: 6px solid white;
   max-width: 80ch;
 }
@@ -190,12 +190,26 @@ html {
   .front-page .header .hamburger {
     display: block;
     cursor: pointer;
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  .front-page .header .hamburger .line {
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+  }
+  .front-page .header .hamburger .line.turn {
+    -webkit-transform: rotate(265deg);
+            transform: rotate(265deg);
+  }
+  .front-page .header .hamburger.rotate {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .front-page .header .nav {
     position: absolute;
     right: 0px;
-    height: 87vh;
-    top: 3vh;
+    height: 25vh;
+    top: 8vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -207,12 +221,13 @@ html {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    -webkit-transform: translateY(-120%);
-            transform: translateY(-120%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    background-color: #161616;
   }
   .front-page .header .nav li {
     opacity: 0;
@@ -228,11 +243,16 @@ html {
             justify-content: center;
   }
   .front-page .header .nav-active {
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   .front-page .header .social-media {
     display: none;
+  }
+  .project-header .project-pic {
+    max-height: 300px;
+    border: 6px solid white;
+    max-width: 40ch;
   }
 }
 

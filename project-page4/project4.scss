@@ -76,8 +76,8 @@ $red-clr: orangered;
             cursor: pointer;
             
             div{
-                width: 20px;
-                height: 3px;
+                width: 16px;
+                height: 2px;
                 background-color: #fff;
                 margin: 5px;
             }
@@ -136,19 +136,33 @@ $red-clr: orangered;
             .hamburger{
                 display: block;
                 cursor: pointer;
+                transition: all 0.4s ease-in;
+
+                .line{
+                    transition: all 0.4s ease;
+                }
+
+                .line.turn{
+                    transform: rotate(265deg);
+                }
+            }
+
+            .hamburger.rotate{
+                transform: rotate(90deg);
             }
 
             .nav{
                 position: absolute;
                 right: 0px;
-                height: 87vh;
-                top: 3vh;
+                height: 25vh;
+                top: 8vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center; 
                 width: 100%;
-                transform: translateY(-120%);
+                transform: translateX(-100%);
                 transition: transform 0.5s ease-in;
+                background-color: $main-bg-color;
                  
                 li{
                     opacity: 0;
@@ -161,7 +175,7 @@ $red-clr: orangered;
             }
 
             .nav-active{
-                transform: translateY(10%);
+                transform: translateX(0%);
             }
 
             .social-media{
@@ -181,4 +195,6 @@ $red-clr: orangered;
         transform: translateY(0px);
     }
 }
+
+
 
