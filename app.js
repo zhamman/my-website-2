@@ -3,6 +3,7 @@ let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
 let subTitle = document.querySelector('.sub-title');
 let subLink = document.querySelector(".sub a");
+let headerLinks = document.querySelector('.nav li')
 
 // Opening page animation 
 window.addEventListener('DOMContentLoaded', ()=>{
@@ -32,6 +33,15 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 
 // Front page Animations
+
+// nav animation
+// setTimeout(function(){
+//     headerLinks.forEach((link, idx)=>{
+//         link.style.animation = `FadeUp 0.3s ease forwards ${idx/ 7 + 0.3}s`
+//     });
+// },4200);
+
+// subtitle animation
 
 setTimeout(function(){
     subTitle.style.visibility = 'visible'; 
