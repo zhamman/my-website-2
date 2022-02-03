@@ -117,19 +117,31 @@ $red-clr: orangered;
         color: rgb(216, 216, 216);
 
         .text-container{
-            max-width: 80ch;
+            max-width: 80%;
+            height: auto;
             h1{
                 padding: 2rem 0.6rem 2rem 0.6rem;
                 font-size: 2rem;
-                
+                .red{
+                    color: $red-clr;
+                }
             }
             p{  
                 padding: 0.6rem;
                 .pre-text{
                     color: rgb(124, 124, 124);
                 }
+                .yellow{
+                    color: $yellow-clr;
+                    &:hover{
+                        color: $red-clr;
+                    }
+                }
                 .red{
                     color: $red-clr;
+                    &:hover{
+                        color: $yellow-clr;
+                    }
                 }
                 .stack{
                     display: flex;
@@ -139,15 +151,18 @@ $red-clr: orangered;
                 a{
                     // text-decoration: none;
                     color: $yellow-clr;
+                    &:hover{
+                        color: $red-clr;
+                    }
                 }
             }
 
             .project-pic{
+                max-width: 100%;
+                height: auto;
                 margin-top: 0.6rem;
                 margin-left: 0.6rem;
-                max-height: 500px;
                 border: 6px solid white;
-                max-width: 80ch;
             }
         }
     }
