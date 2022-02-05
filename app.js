@@ -72,7 +72,6 @@ const navSlide = () => {
 navSlide()
 
 
-
 // function moveImg(e) {
 //     const x = e.clientX;
 //     const y = e.clientY;

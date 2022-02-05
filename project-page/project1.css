@@ -196,14 +196,20 @@ html {
 }
 
 @media all and (min-width: 2040px) {
-  .front-page .header .mini_logo {
+  body .front-page {
+    font-size: 2rem;
+  }
+  body .front-page .header .mini_logo {
     font-size: 2.3rem;
   }
-  .front-page .header li a {
+  body .front-page .header li a {
     font-size: 2rem;
   }
-  .front-page .header .fa-github {
+  body .front-page .header .fa-github {
     font-size: 2rem;
+  }
+  body .front-page .project-header .project-pic {
+    max-width: 1600px;
   }
 }
 
@@ -269,11 +275,6 @@ html {
   }
   .front-page .header .social-media {
     display: none;
-  }
-  .project-header .project-pic {
-    max-height: 300px;
-    border: 6px solid white;
-    max-width: 40ch;
   }
 }
 

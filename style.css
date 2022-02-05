@@ -36,6 +36,7 @@ html {
   display: inline-block;
   bottom: -20px;
   opacity: 0;
+  font-size: 1.7rem;
 }
 
 .intro .logo.active {
@@ -518,7 +519,6 @@ html {
 }
 
 .project-page #projects .square .content .project-title {
-  font-size: 1.2rem;
   text-decoration: none;
   padding: 5px;
 }
@@ -788,7 +788,7 @@ html {
     font-size: 2.5rem;
   }
   .front-page .header .mini_logo {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .front-page .header li a {
     font-size: 2rem;
@@ -803,12 +803,18 @@ html {
     margin-top: 1rem;
     font-size: 1.5rem;
   }
+  .project-page {
+    font-size: 2rem;
+  }
   .project-page .title {
     font-size: 3rem;
   }
   .project-page #projects .square {
     width: 500px;
     height: 500px;
+  }
+  .project-page #projects .square .project-title a {
+    font-size: 2rem;
   }
   .about-me-section .about-me-container h1 {
     font-size: 3rem;
@@ -857,8 +863,8 @@ html {
     transition: all 0.4s ease;
   }
   .front-page .header nav .hamburger .line.turn {
-    -webkit-transform: rotate(280deg);
-            transform: rotate(280deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
   .front-page .header nav .hamburger.rotate {
     -webkit-transform: rotate(90deg);
