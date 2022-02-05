@@ -170,19 +170,27 @@ $red-clr: orangered;
 
 
 @media all and (min-width: 2040px){
+    body{
+        
+        .front-page{
+            font-size: 2rem;
+            .header{
+                .mini_logo{
+                    font-size: 2.3rem;
+                }
+                li a{
+                    font-size: 2rem;
+                }
+                .fa-github{
+                    font-size: 2rem;
+                }
 
-    .front-page{
-        .header{
-            .mini_logo{
-                font-size: 2.3rem;
             }
-            li a{
-                font-size: 2rem;
+            .project-header{
+                .project-pic{
+                    max-width: 1600px;
+                }
             }
-            .fa-github{
-                font-size: 2rem;
-            }
-
         }
     }
 }
@@ -241,14 +249,6 @@ $red-clr: orangered;
             .social-media{
                 display: none;
             }
-        }
-    }
-
-    .project-header{
-        .project-pic{
-            max-height: 300px;
-            border: 6px solid white;
-            max-width:40ch;
         }
     }
 }
