@@ -389,11 +389,11 @@ $red-clr: orangered;
                 z-index: 99;
 
                 &:hover{
-                    img{
-                        visibility: visible;
-                        z-index: -1;
-                        animation: pic 0.5s linear;
-                    }
+                    // img{
+                    //     visibility: visible;
+                    //     z-index: -1;
+                    //     animation: pic 0.5s linear;
+                    // }
                 }
         
                 a{
@@ -449,19 +449,19 @@ $red-clr: orangered;
 //     }
 // }
 
-@keyframes pic{
-    from{
-        width: 0%;
-        height: 0%;
-        transform: rotate(180deg)
-    }
+// @keyframes pic{
+//     from{
+//         width: 0%;
+//         height: 0%;
+//         transform: rotate(180deg)
+//     }
     
-    to{
-        width: 65%;
-        height: 35%;
-        transform: rotate(0deg)
-    }
-}
+//     to{
+//         width: 65%;
+//         height: 35%;
+//         transform: rotate(0deg)
+//     }
+// }
 
 @keyframes animate {
     0%{
