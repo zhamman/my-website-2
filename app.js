@@ -34,13 +34,6 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
 // Front page Animations
 
-// nav animation
-// setTimeout(function(){
-//     headerLinks.forEach((link, idx)=>{
-//         link.style.animation = `FadeUp 0.3s ease forwards ${idx/ 7 + 0.3}s`
-//     });
-// },4200);
-
 // subtitle animation
 
 setTimeout(function(){
@@ -70,20 +63,5 @@ const navSlide = () => {
 }
 
 navSlide()
-
-
-// function moveImg(e) {
-//     const x = e.clientX;
-//     const y = e.clientY;
-//     const img = document.querySelector(".project-img");
-//     const content = document.querySelector(".content");
-
-//     content.addEventListener('mouseover', () =>{
-//     img.style.left = x+'px';
-//     img.style.top = y+'px';
-
-//     console.log(e.clientX)
-//     });
-// }
 
 
