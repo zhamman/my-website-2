@@ -237,6 +237,8 @@ $red-clr: orangered;
             margin-top: 0.4rem;
             transition: 0.2s linear;
             font-weight: 800;
+            animation: fadeOut linear 2s 4s;
+            
 
             &:hover{
                 background: rgb(83, 83, 83);
