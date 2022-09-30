@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 html {
@@ -193,6 +193,15 @@ html {
   margin-top: 0.6rem;
   margin-left: 0.6rem;
   border: 6px solid white;
+}
+
+.front-page .next-btn {
+  margin-top: 2rem;
+}
+
+.front-page .next-btn a {
+  color: orangered;
+  padding-top: 2rem;
 }
 
 @media all and (min-width: 2040px) {
