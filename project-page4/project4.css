@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
 html {
@@ -111,6 +111,34 @@ html {
 
 .front-page .home-btn a:hover {
   color: lightgray;
+}
+
+.front-page .project-header {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 3rem;
+  color: #d8d8d8;
+}
+
+.front-page .project-header .text-container {
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+}
+
+.front-page .project-header .text-container h1 {
+  padding: 2rem 0.6rem 2rem 0.6rem;
+  font-size: 2rem;
+}
+
+.front-page .project-header .text-container h1 .red {
+  color: orangered;
+}
+
+.front-page .project-header .text-container h1 .yellow {
+  color: #d9ff00;
 }
 
 @media all and (min-width: 2040px) {
