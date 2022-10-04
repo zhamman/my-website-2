@@ -55,14 +55,7 @@ html {
 
 .front-page {
   background: #161616;
-  height: 100vh;
   width: 100%;
-}
-
-@media screen and (max-height: 768px) {
-  .front-page {
-    height: 100vh;
-  }
 }
 
 .front-page .header {
