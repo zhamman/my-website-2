@@ -639,6 +639,7 @@ $red-clr: orangered;
           background: none;
           padding: 0.8rem 1rem;
           background-color: #f3f3f3;
+          color: black;
           border-radius: 0.5rem;
           cursor: pointer;
           transition: 0.4s;
@@ -856,6 +857,7 @@ $red-clr: orangered;
         .submit-group {
           input[type="submit"] {
             padding: 0.4rem 0.5rem;
+            // color: yellow;
           }
         }
       }
