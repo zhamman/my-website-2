@@ -13,7 +13,6 @@ html {
 .front-page {
   padding-bottom: 4rem;
   background: #161616;
-  height: 100%;
   width: 100%;
 }
 
@@ -205,20 +204,14 @@ html {
 }
 
 @media all and (min-width: 2040px) {
-  body .front-page {
-    font-size: 2rem;
-  }
-  body .front-page .header .mini_logo {
+  .front-page .header .mini_logo {
     font-size: 2.3rem;
   }
-  body .front-page .header li a {
+  .front-page .header li a {
     font-size: 2rem;
   }
-  body .front-page .header .fa-github {
+  .front-page .header .fa-github {
     font-size: 2rem;
-  }
-  body .front-page .project-header .project-pic {
-    max-width: 1600px;
   }
 }
 
