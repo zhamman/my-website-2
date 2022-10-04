@@ -252,7 +252,7 @@ html {
 
 @media screen and (max-width: 500px) {
   .front-page .sub {
-    margin-top: -1rem;
+    margin-top: -1.5rem;
   }
 }
 
