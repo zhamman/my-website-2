@@ -269,11 +269,12 @@ html {
   visibility: hidden;
   color: #000;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.4rem 0.5rem;
   border: 1px solid black;
-  background-color: lightgray;
+  background: -webkit-gradient(linear, left top, right top, from(orangered), to(#d9ff00));
+  background: linear-gradient(to right, orangered, #d9ff00);
   border-radius: 10px;
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   font-weight: 800;
@@ -282,8 +283,11 @@ html {
 }
 
 .front-page .sub a:hover {
-  background: #535353;
-  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#d9ff00), to(orangered));
+  background: linear-gradient(to right, #d9ff00, orangered);
+  color: #000;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @-webkit-keyframes dash {
