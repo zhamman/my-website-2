@@ -752,6 +752,7 @@ html {
   background: none;
   padding: 0.8rem 1rem;
   background-color: #f3f3f3;
+  color: black;
   border-radius: 0.5rem;
   cursor: pointer;
   -webkit-transition: 0.4s;
