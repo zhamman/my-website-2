@@ -55,6 +55,7 @@ html {
 
 .front-page {
   background: #161616;
+  height: 100vh;
   width: 100%;
 }
 
@@ -227,6 +228,11 @@ html {
 }
 
 .front-page .sub {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,12 +246,23 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .front-page .sub {
+    top: 62%;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .front-page .sub {
-    margin-top: -1.5rem;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .front-page .sub {
+    top: 58%;
   }
 }
 
@@ -262,6 +279,18 @@ html {
 
 .front-page .sub .sub-title .yellow:hover {
   color: orangered;
+}
+
+@media screen and (max-width: 768px) {
+  .front-page .sub .sub-title {
+    font-size: 00.95rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .front-page .sub .sub-title {
+    font-size: 00.6rem;
+  }
 }
 
 .front-page .sub a {
@@ -287,6 +316,28 @@ html {
   color: #000;
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .front-page .sub a {
+    font-size: 00.95rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .front-page .sub a {
+    font-size: 00.85rem;
+    padding: 0.3rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .front-page .sub a {
+    font-size: 00.6rem;
+    padding: 0.2rem 0.3rem;
+    margin-top: 0.55rem;
+  }
 }
 
 @-webkit-keyframes dash {
