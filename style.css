@@ -55,6 +55,7 @@ html {
 
 .front-page {
   background: #161616;
+  height: 100vh;
   width: 100%;
 }
 
@@ -255,7 +256,6 @@ html {
 
 @media screen and (max-width: 500px) {
   .front-page .sub {
-<<<<<<< HEAD
     top: 58%;
   }
 }
@@ -263,9 +263,6 @@ html {
 @media screen and (max-width: 350px) {
   .front-page .sub {
     top: 56.6%;
-=======
-    margin-top: -1.5rem;
->>>>>>> master
   }
 }
 
