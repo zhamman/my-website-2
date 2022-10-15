@@ -256,13 +256,13 @@ html {
 
 @media screen and (max-width: 500px) {
   .front-page .sub {
-    top: 58%;
+    top: 60%;
   }
 }
 
 @media screen and (max-width: 350px) {
   .front-page .sub {
-    top: 56.6%;
+    top: 58%;
   }
 }
 
