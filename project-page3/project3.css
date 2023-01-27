@@ -129,6 +129,9 @@ html {
           flex-direction: column;
   padding-top: 3rem;
   color: #d8d8d8;
+  max-width: 2440px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
 .front-page .project-header .text-container {

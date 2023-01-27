@@ -113,6 +113,9 @@ $red-clr: orangered;
     flex-direction: column;
     padding-top: 3rem;
     color: rgb(216, 216, 216);
+    max-width: 2440px;
+    margin: 0 auto;
+    min-height: 100vh;
 
     .text-container {
       max-width: 80%;
