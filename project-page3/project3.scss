@@ -20,7 +20,7 @@ $red-clr: orangered;
 .front-page {
   padding-bottom: 4rem;
   background: #161616;
-  //   height: 100vh;
+  min-height: 100vh;
   width: 100%;
 
   // Header section
@@ -115,7 +115,6 @@ $red-clr: orangered;
     color: rgb(216, 216, 216);
     max-width: 2440px;
     margin: 0 auto;
-    min-height: 100vh;
 
     .text-container {
       max-width: 80%;

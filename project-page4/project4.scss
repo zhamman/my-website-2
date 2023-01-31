@@ -113,6 +113,9 @@ $red-clr: orangered;
     flex-direction: column;
 
     color: rgb(216, 216, 216);
+    @media screen and (max-width: 450px) {
+      margin-top: 0px;
+    }
 
     .text-container {
       max-width: 80%;
