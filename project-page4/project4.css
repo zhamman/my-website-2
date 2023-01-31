@@ -122,6 +122,12 @@ html {
   color: #d8d8d8;
 }
 
+@media screen and (max-width: 450px) {
+  .front-page .project-header {
+    margin-top: 0px;
+  }
+}
+
 .front-page .project-header .text-container {
   max-width: 80%;
   height: auto;
