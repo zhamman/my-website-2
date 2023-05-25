@@ -184,6 +184,9 @@ $red-clr: orangered;
                 @media screen and (min-width: 1440px) {
                   height: 250px;
                 }
+                &.portfolio-img {
+                  border: 1px solid white;
+                }
               }
               position: relative;
               .cover {
@@ -210,8 +213,8 @@ $red-clr: orangered;
             margin-top: 2rem;
           }
           &.second {
-            margin-top: 1.1rem;
-            justify-content: center;
+            margin-top: 3rem;
+            justify-content: space-evenly;
             margin-bottom: 2rem;
             @media screen and (max-width: 768px) {
               margin-top: 0;

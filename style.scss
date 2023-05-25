@@ -139,14 +139,17 @@ $red-clr: orangered;
       }
     }
   }
-
-  #svg-logo {
+  .logo-main-page {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    // width: 600px;
+  }
 
+  #svg-logo {
+    @media screen and (max-width) {
+    }
     path:nth-child(2) {
       stroke-dasharray: 453.7;
       stroke-dashoffset: 453.6;
@@ -208,24 +211,25 @@ $red-clr: orangered;
     }
   }
   .sub {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    // position: absolute;
+    // top: 60%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 1rem;
     // height: 100vh;
-    @media screen and (min-width: 768px) {
-      top: 62%;
-    }
-    @media screen and (max-width: 500px) {
-      top: 60%;
-    }
-    @media screen and (max-width: 350px) {
-      top: 58%;
-    }
+    // @media screen and (min-width: 768px) {
+    //   top: 62%;
+    // }
+    // @media screen and (max-width: 500px) {
+    //   top: 60%;
+    // }
+    // @media screen and (max-width: 350px) {
+    //   top: 58%;
+    // }
     .sub-title {
       color: #fff;
       visibility: hidden;
@@ -343,7 +347,7 @@ $red-clr: orangered;
   .title {
     padding: 1rem;
     // text-decoration: underline;
-    font-weight: 100;
+
     font-size: 1.6rem;
     text-align: center;
     padding-top: 4rem;
@@ -517,7 +521,7 @@ $red-clr: orangered;
 
   .about-me-container {
     text-align: center;
-    width: 80%;
+    width: 60%;
     margin: auto;
     padding: 3rem;
     @media screen and (max-height: 768px) {
@@ -577,7 +581,7 @@ $red-clr: orangered;
 
     h1 {
       font-size: 2rem;
-      text-transform: uppercase;
+      //text-transform: uppercase;
       text-align: center;
       margin-bottom: 1rem;
       // .yellow{
@@ -707,10 +711,10 @@ $red-clr: orangered;
   .front-page {
     .header {
       .mini_logo {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
       li a {
-        font-size: 2rem;
+        font-size: 1.4rem;
       }
       .fa-github {
         font-size: 2rem;
@@ -718,12 +722,12 @@ $red-clr: orangered;
     }
 
     #svg-logo {
-      width: 1000px;
+      width: 800px;
     }
 
     .sub {
       margin-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -787,6 +791,28 @@ $red-clr: orangered;
       padding-top: 1rem;
       font-size: 2rem;
     }
+  }
+  .header {
+    .mini_logo {
+      font-size: 1.7rem;
+    }
+    li a {
+      font-size: 1.4rem;
+    }
+    .fa-github {
+      font-size: 2rem;
+    }
+  }
+
+  .sub {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media all and (min-width: 769px) {
+  #svg-logo {
+    width: 600px;
   }
 }
 
