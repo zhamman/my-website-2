@@ -161,8 +161,8 @@ $red-clr: orangered;
                   justify-content: center;
                   align-items: center;
                   background-color: #161616;
-                  height: 105%;
-                  width: 100%;
+                  height: 100%;
+                  width: 101%;
                   opacity: 0.9;
                   a {
                     opacity: 1;
@@ -181,6 +181,7 @@ $red-clr: orangered;
               }
               img {
                 height: 150px;
+                border-radius: 5px;
                 @media screen and (min-width: 1440px) {
                   height: 250px;
                 }
@@ -190,6 +191,8 @@ $red-clr: orangered;
               }
               position: relative;
               .cover {
+                height: 100%;
+                width: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -210,7 +213,7 @@ $red-clr: orangered;
             }
           }
           &.first {
-            margin-top: 2rem;
+            margin-top: 3rem;
           }
           &.second {
             margin-top: 3rem;
