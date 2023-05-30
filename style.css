@@ -46,7 +46,7 @@ html {
 
 .front-page {
   background: #161616;
-  height: 100vh;
+  height: 110vh;
   width: 100%;
 }
 .front-page .header {
@@ -272,6 +272,7 @@ html {
   flex-direction: column;
   background-color: #161616;
   color: white;
+  min-height: 100vh;
 }
 .project-page .title {
   padding: 1rem;
@@ -383,7 +384,7 @@ html {
   }
 }
 .about-me-section {
-  height: 80vh;
+  min-height: 100vh;
   background: #161616;
   color: #fff;
   display: flex;
@@ -412,6 +413,7 @@ html {
 }
 .about-me-section .about-me-container p {
   margin-top: 2rem;
+  line-height: 1.5;
 }
 .about-me-section .about-me-container p .yellow {
   color: orangered;
@@ -677,12 +679,18 @@ html {
   .project-page #projects .square .content .project-title {
     font-size: 1.2rem;
   }
+  .about-me-section {
+    min-height: 150vh;
+  }
   .about-me-section .about-me-container {
     width: 100%;
+    margin: 2rem 0;
+  }
+  .contact-page .contact-container {
+    margin: 3rem 0 2rem 0;
   }
   .contact-page .contact-container h1 {
     font-size: 1.5rem;
-    margin-bottom: 0.2rem;
   }
   .contact-page .contact-container .form-group .form-element {
     padding: 0.4rem 0.5rem;
@@ -692,9 +700,6 @@ html {
   }
 }
 @media all and (max-width: 600px) {
-  .project-page {
-    height: 180vh;
-  }
   .project-page .project-container {
     display: flex;
     justify-content: center;
