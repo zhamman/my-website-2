@@ -11,7 +11,7 @@ html {
 
 .intro {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -50,12 +50,14 @@ html {
   width: 100%;
 }
 .front-page .header {
+  position: fixed;
+  width: 100%;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 2rem;
+  margin: 0 auto;
   padding: 30px;
 }
 .front-page .header .mini_logo {
@@ -84,6 +86,7 @@ html {
   text-decoration: none;
   margin-left: 20px;
   color: white;
+  font-size: 1rem;
 }
 .front-page .header li a:hover {
   color: darkgray;
@@ -177,6 +180,7 @@ html {
   color: #fff;
   visibility: hidden;
   animation: fadeIn ease 2s 4s;
+  font-size: 1.3rem;
 }
 .front-page .sub .sub-title .yellow {
   color: rgb(217, 255, 0);
@@ -206,6 +210,7 @@ html {
   transition: 0.2s linear;
   font-weight: 800;
   animation: fadeOut linear 2s 4s;
+  font-size: 1rem;
 }
 .front-page .sub a:hover {
   background: linear-gradient(to right, rgb(217, 255, 0), orangered);
@@ -341,7 +346,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 99;
+  z-index: 9;
 }
 .project-page #projects .square .content a {
   text-decoration: none;
@@ -449,7 +454,7 @@ html {
   overflow: none;
 }
 .contact-page .contact-container h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -647,16 +652,19 @@ html {
   .front-page .header nav .nav {
     position: absolute;
     right: 0px;
-    height: 25vh;
-    top: 8vh;
+    top: 0;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in;
+    z-index: 9999;
   }
   .front-page .header nav .nav li {
+    position: relative;
+    z-index: 9999;
     opacity: 0;
     padding: 20px;
     display: flex;

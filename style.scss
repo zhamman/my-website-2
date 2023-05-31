@@ -19,7 +19,7 @@ $red-clr: orangered;
 
 .intro {
   position: fixed;
-  z-index: 100;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -68,12 +68,14 @@ $red-clr: orangered;
   // Header section
 
   .header {
+    position: fixed;
+    width: 100%;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
+    margin: 0 auto;
     padding: 30px;
 
     .mini_logo {
@@ -107,6 +109,7 @@ $red-clr: orangered;
       text-decoration: none;
       margin-left: 20px;
       color: white;
+      font-size: 1rem;
       &:hover {
         color: darkgray;
       }
@@ -234,6 +237,7 @@ $red-clr: orangered;
       color: #fff;
       visibility: hidden;
       animation: fadeIn ease 2s 4s;
+      font-size: 1.3rem;
       .yellow {
         color: $yellow-clr;
 
@@ -262,6 +266,7 @@ $red-clr: orangered;
       transition: 0.2s linear;
       font-weight: 800;
       animation: fadeOut linear 2s 4s;
+      font-size: 1rem;
 
       &:hover {
         background: linear-gradient(to right, $yellow-clr, $red-clr);
@@ -423,7 +428,7 @@ $red-clr: orangered;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        z-index: 99;
+        z-index: 9;
 
         // &:hover{
         //     // img{
@@ -580,7 +585,7 @@ $red-clr: orangered;
     overflow: none;
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.6rem;
       //text-transform: uppercase;
       text-align: center;
       margin-bottom: 1rem;
@@ -845,17 +850,22 @@ $red-clr: orangered;
         .nav {
           position: absolute;
           right: 0px;
-          height: 25vh;
-          top: 8vh;
+          top: 0;
+          margin-top: 3rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
           display: flex;
           flex-direction: column;
           align-items: center;
           width: 100%;
-          transform: translateX(-100%);
-          transition: transform 0.5s ease-in;
+          //transform: translateX(-100%);
+          //transition: transform 0.5s ease-in;
           // background-color: rgb(27, 27, 27);
+          z-index: 9999;
 
           li {
+            position: relative;
+            z-index: 9999;
             opacity: 0;
             padding: 20px;
             display: flex;
