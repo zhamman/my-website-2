@@ -137,6 +137,7 @@ $red-clr: orangered;
 
     .social-media a {
       color: white;
+
       &:hover {
         color: $red-clr;
       }
@@ -790,6 +791,12 @@ $red-clr: orangered;
   }
 }
 
+@media all and (min-width: 2040px) {
+  .fa-github {
+    font-size: 2rem;
+  }
+}
+
 @media all and (min-width: 1080px) {
   .project-page {
     .title {
@@ -803,9 +810,6 @@ $red-clr: orangered;
     }
     li a {
       font-size: 1.4rem;
-    }
-    .fa-github {
-      font-size: 2rem;
     }
   }
 

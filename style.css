@@ -607,6 +607,11 @@ html {
     font-size: 1.6rem;
   }
 }
+@media all and (min-width: 2040px) {
+  .fa-github {
+    font-size: 2rem;
+  }
+}
 @media all and (min-width: 1080px) {
   .project-page .title {
     padding-top: 1rem;
@@ -617,9 +622,6 @@ html {
   }
   .header li a {
     font-size: 1.4rem;
-  }
-  .header .fa-github {
-    font-size: 2rem;
   }
   .sub {
     margin-top: 1rem;
