@@ -167,8 +167,10 @@ $red-clr: orangered;
                   a {
                     opacity: 1;
                     text-decoration: none;
+                    transition: all 0.2s ease;
                     &:hover {
                       color: white;
+                      transform: scale(1.15);
                     }
                     &:last-child {
                       margin-top: 1rem;

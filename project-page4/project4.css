@@ -147,9 +147,11 @@ html {
 .front-page .project-header .text-container .projects-container .row .project .image:hover .cover a {
   opacity: 1;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 .front-page .project-header .text-container .projects-container .row .project .image:hover .cover a:hover {
   color: white;
+  transform: scale(1.15);
 }
 .front-page .project-header .text-container .projects-container .row .project .image:hover .cover a:last-child {
   margin-top: 1rem;

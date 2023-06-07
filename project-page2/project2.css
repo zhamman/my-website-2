@@ -128,6 +128,10 @@ html {
 }
 .front-page .project-header .text-container p a {
   color: rgb(217, 255, 0);
+  text-decoration-style: double;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  transition: all 0.3s ease;
 }
 .front-page .project-header .text-container p a:hover {
   color: orangered;
