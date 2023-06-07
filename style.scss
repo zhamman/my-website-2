@@ -88,6 +88,8 @@ $red-clr: orangered;
     ul {
       display: flex;
       list-style: none;
+      justify-content: center;
+      align-items: center;
       .red {
         color: $red-clr;
 
@@ -215,25 +217,11 @@ $red-clr: orangered;
     }
   }
   .sub {
-    // position: absolute;
-    // top: 60%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 1rem;
-    // height: 100vh;
-    // @media screen and (min-width: 768px) {
-    //   top: 62%;
-    // }
-    // @media screen and (max-width: 500px) {
-    //   top: 60%;
-    // }
-    // @media screen and (max-width: 350px) {
-    //   top: 58%;
-    // }
     .sub-title {
       color: #fff;
       visibility: hidden;
@@ -246,6 +234,14 @@ $red-clr: orangered;
           color: $red-clr;
         }
       }
+      .red {
+        color: $red-clr;
+
+        &:hover {
+          color: $yellow-clr;
+        }
+      }
+
       @media screen and (max-width: 768px) {
         font-size: 00.95rem;
       }
@@ -255,13 +251,12 @@ $red-clr: orangered;
     }
     a {
       visibility: hidden;
-      color: #000;
+      color: white;
       text-decoration: none;
       padding: 0.4rem 0.5rem;
-      border: 1px solid black;
-      // background-color: lightgray;
-      background: linear-gradient(to right, $red-clr, $yellow-clr);
-      // background-color: $red-clr;
+      border: 1px solid white;
+      //background: linear-gradient(to right, $red-clr, $yellow-clr);
+      //background: white;
       border-radius: 10px;
       margin-top: 0.8rem;
       transition: 0.2s linear;
@@ -270,7 +265,8 @@ $red-clr: orangered;
       font-size: 1rem;
 
       &:hover {
-        background: linear-gradient(to right, $yellow-clr, $red-clr);
+        //background: linear-gradient(to right, $yellow-clr, $red-clr);
+        background: white;
         color: #000;
         transform: scale(1.05);
       }
@@ -290,16 +286,6 @@ $red-clr: orangered;
     }
   }
 }
-
-// @keyframes FadeUp{
-//     0% {
-//         opacity:0;
-//         margin-top: -40px;
-//     }
-//     100% {
-//         opacity: 1;
-//     }
-// }
 
 @keyframes dash {
   to {
@@ -451,7 +437,12 @@ $red-clr: orangered;
           border: 1px solid white;
           z-index: 0;
         }
-
+        .project-links {
+          transition: all 0.3s ease;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
         .view-project {
           color: $yellow-clr;
           padding: 5px;
@@ -472,38 +463,16 @@ $red-clr: orangered;
           // font-size: 1.2rem;
           text-decoration: none;
           padding: 5px;
-
+          transition: all 0.2s ease;
           &:hover {
             color: rgb(155, 155, 155);
+            transform: scale(1.1);
           }
         }
       }
     }
   }
 }
-
-// @keyframes zoom{
-//     from{
-//         transform: scale(0.8);
-//     }
-//     to{
-//         transform: scale(1)
-//     }
-// }
-
-// @keyframes pic{
-//     from{
-//         width: 0%;
-//         height: 0%;
-//         transform: rotate(180deg)
-//     }
-
-//     to{
-//         width: 65%;
-//         height: 35%;
-//         transform: rotate(0deg)
-//     }
-// }
 
 @keyframes animate {
   0% {
@@ -798,6 +767,10 @@ $red-clr: orangered;
 }
 
 @media all and (min-width: 1080px) {
+  .fa-github {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
   .project-page {
     .title {
       padding-top: 1rem;

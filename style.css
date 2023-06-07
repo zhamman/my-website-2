@@ -69,6 +69,8 @@ html {
 .front-page .header ul {
   display: flex;
   list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 .front-page .header ul .red {
   color: orangered;
@@ -188,6 +190,12 @@ html {
 .front-page .sub .sub-title .yellow:hover {
   color: orangered;
 }
+.front-page .sub .sub-title .red {
+  color: orangered;
+}
+.front-page .sub .sub-title .red:hover {
+  color: rgb(217, 255, 0);
+}
 @media screen and (max-width: 768px) {
   .front-page .sub .sub-title {
     font-size: 0.95rem;
@@ -200,11 +208,10 @@ html {
 }
 .front-page .sub a {
   visibility: hidden;
-  color: #000;
+  color: white;
   text-decoration: none;
   padding: 0.4rem 0.5rem;
-  border: 1px solid black;
-  background: linear-gradient(to right, orangered, rgb(217, 255, 0));
+  border: 1px solid white;
   border-radius: 10px;
   margin-top: 0.8rem;
   transition: 0.2s linear;
@@ -213,7 +220,7 @@ html {
   font-size: 1rem;
 }
 .front-page .sub a:hover {
-  background: linear-gradient(to right, rgb(217, 255, 0), orangered);
+  background: white;
   color: #000;
   transform: scale(1.05);
 }
@@ -359,6 +366,12 @@ html {
   border: 1px solid white;
   z-index: 0;
 }
+.project-page #projects .square .content .project-links {
+  transition: all 0.3s ease;
+}
+.project-page #projects .square .content .project-links:hover {
+  transform: scale(1.05);
+}
 .project-page #projects .square .content .view-project {
   color: rgb(217, 255, 0);
   padding: 5px;
@@ -375,9 +388,11 @@ html {
 .project-page #projects .square .content .project-title {
   text-decoration: none;
   padding: 5px;
+  transition: all 0.2s ease;
 }
 .project-page #projects .square .content .project-title:hover {
   color: rgb(155, 155, 155);
+  transform: scale(1.1);
 }
 
 @keyframes animate {
@@ -613,6 +628,10 @@ html {
   }
 }
 @media all and (min-width: 1080px) {
+  .fa-github {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
   .project-page .title {
     padding-top: 1rem;
     font-size: 2rem;

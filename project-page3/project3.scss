@@ -170,9 +170,22 @@ $red-clr: orangered;
   }
   .next-btn {
     margin-top: 2rem;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
     a {
       color: $red-clr;
-      padding-top: 2rem;
+      //padding-top: 2rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      border: 1px solid $red-clr;
+      &:hover {
+        border: 1px solid $yellow-clr;
+        color: $yellow-clr;
+        transform: scale(1.2);
+      }
     }
   }
 }

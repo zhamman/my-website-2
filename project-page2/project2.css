@@ -141,10 +141,22 @@ html {
 }
 .front-page .next-btn {
   margin-top: 2rem;
+  transition: all 0.2s ease;
+}
+.front-page .next-btn:hover {
+  transform: scale(1.05);
 }
 .front-page .next-btn a {
   color: orangered;
-  padding-top: 2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  border: 1px solid orangered;
+}
+.front-page .next-btn a:hover {
+  border: 1px solid rgb(217, 255, 0);
+  color: rgb(217, 255, 0);
+  transform: scale(1.2);
 }
 
 @media all and (min-width: 2040px) {
