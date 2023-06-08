@@ -196,6 +196,11 @@ html {
 .front-page .sub .sub-title .red:hover {
   color: rgb(217, 255, 0);
 }
+@media screen and (min-width: 2040px) {
+  .front-page .sub .sub-title {
+    font-size: 1.6rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .front-page .sub .sub-title {
     font-size: 0.95rem;
@@ -223,6 +228,13 @@ html {
   background: white;
   color: #000;
   transform: scale(1.05);
+}
+@media screen and (min-width: 2040px) {
+  .front-page .sub a {
+    font-size: 1.2rem;
+    margin-top: 1.2rem;
+    padding: 0.4rem 0.6rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .front-page .sub a {
@@ -579,14 +591,13 @@ html {
     font-size: 2rem;
   }
   .front-page #svg-logo {
-    width: 800px;
+    width: 900px;
   }
   .front-page .sub {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    margin-top: 1.3rem;
   }
   .project-page {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   .project-page .title {
     font-size: 3rem;

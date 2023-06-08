@@ -242,6 +242,10 @@ $red-clr: orangered;
         }
       }
 
+      @media screen and (min-width: 2040px) {
+        font-size: 1.6rem;
+      }
+
       @media screen and (max-width: 768px) {
         font-size: 00.95rem;
       }
@@ -269,6 +273,11 @@ $red-clr: orangered;
         background: white;
         color: #000;
         transform: scale(1.05);
+      }
+      @media screen and (min-width: 2040px) {
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+        padding: 0.4rem 0.6rem;
       }
       @media screen and (max-width: 768px) {
         font-size: 00.95rem;
@@ -697,17 +706,16 @@ $red-clr: orangered;
     }
 
     #svg-logo {
-      width: 800px;
+      width: 900px;
     }
 
     .sub {
-      margin-top: 1rem;
-      font-size: 1.2rem;
+      margin-top: 1.3rem;
     }
   }
 
   .project-page {
-    font-size: 2rem;
+    font-size: 1.4rem;
     .title {
       font-size: 3rem;
     }
