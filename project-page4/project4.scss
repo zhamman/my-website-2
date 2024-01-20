@@ -107,11 +107,7 @@ $red-clr: orangered;
     }
   }
   .project-header {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     flex-direction: column;
-
     color: rgb(216, 216, 216);
     @media screen and (max-width: 450px) {
       margin-top: 0px;
