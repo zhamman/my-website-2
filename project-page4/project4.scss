@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 // variables
@@ -26,24 +27,90 @@ $red-clr: orangered;
   // Header section
 
   .header {
+    position: fixed;
+    width: 100%;
     color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 2rem;
-    padding: 30px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    z-index: 9999;
+    background-color: #161616;
+
+    @media all and (max-width: 768px) {
+      .hamburger.rotate {
+        transform: rotate(90deg);
+      }
+
+      .nav {
+        position: fixed;
+        right: 0px;
+        top: 0;
+        // margin-top: 3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in;
+        background-color: #161616;
+        z-index: 999;
+        height: 100%;
+
+        li {
+          position: relative;
+          z-index: 9999;
+          opacity: 0;
+          padding: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          a {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .nav-active {
+        transform: translateX(0%);
+      }
+      .social-media {
+        display: none;
+      }
+    }
 
     .mini_logo {
-      display: flex;
-      align-items: center;
-      font-size: 1.3rem;
-      cursor: pointer;
+      a {
+        position: relative;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        font-size: 1.3rem;
+        cursor: pointer;
+        z-index: 9999;
+        @media all and (min-width: 2040px) {
+          font-size: 1.7rem;
+        }
+        @media all and (min-width: 1080px) {
+          font-size: 1.5rem;
+        }
+        &:hover {
+          color: $yellow-clr;
+        }
+      }
     }
 
     ul {
       display: flex;
       list-style: none;
+      justify-content: center;
+      align-items: center;
       .red {
         color: $red-clr;
 
@@ -63,18 +130,22 @@ $red-clr: orangered;
 
     li a {
       text-decoration: none;
-      margin-left: 20px;
+      padding: 0 1.5rem;
       color: white;
-    }
-
-    li a:hover {
-      color: darkgray;
+      font-size: 1rem;
+      &:hover {
+        color: darkgray;
+      }
+      @media all and (min-width: 2040px) {
+        font-size: 1.4rem;
+      }
     }
 
     .hamburger {
+      position: relative;
       display: none;
       cursor: pointer;
-
+      z-index: 99999;
       div {
         width: 16px;
         height: 2px;
@@ -83,16 +154,37 @@ $red-clr: orangered;
       }
 
       &:hover {
-        color: darkgray;
+        color: $red-clr;
       }
 
       &:focus {
         outline: none;
       }
+
+      @media all and (max-width: 768px) {
+        display: block;
+        cursor: pointer;
+        transition: all 0.4s ease-in;
+
+        .line {
+          transition: all 0.4s ease;
+        }
+
+        .line.turn {
+          transform: rotate(270deg);
+        }
+      }
     }
 
     .social-media a {
       color: white;
+      height: 200px;
+      &:hover {
+        color: $red-clr;
+      }
+      .svg-inline--fa {
+        font-size: 1.7rem;
+      }
     }
   }
   .home-btn {
@@ -107,11 +199,7 @@ $red-clr: orangered;
     }
   }
   .project-header {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     flex-direction: column;
-
     color: rgb(216, 216, 216);
     @media screen and (max-width: 450px) {
       margin-top: 0px;
@@ -213,6 +301,12 @@ $red-clr: orangered;
                 margin-bottom: 2rem;
               }
             }
+            .tech-stack-text {
+              @media screen and (max-width: 768px) {
+                margin-bottom: 2.5rem;
+                margin-top: -20px;
+              }
+            }
           }
           &.first {
             margin-top: 3rem;
@@ -251,61 +345,6 @@ $red-clr: orangered;
       }
       .fa-github {
         font-size: 2rem;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 768px) {
-  .front-page {
-    .header {
-      .hamburger {
-        display: block;
-        cursor: pointer;
-        transition: all 0.4s ease-in;
-
-        .line {
-          transition: all 0.4s ease;
-        }
-
-        .line.turn {
-          transform: rotate(265deg);
-        }
-      }
-
-      .hamburger.rotate {
-        transform: rotate(90deg);
-      }
-
-      .nav {
-        position: absolute;
-        right: 0px;
-        height: 25vh;
-        top: 8vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-in;
-        background-color: $main-bg-color;
-
-        li {
-          opacity: 0;
-          padding: 20px;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-
-      .nav-active {
-        transform: translateX(0%);
-      }
-
-      .social-media {
-        display: none;
       }
     }
   }

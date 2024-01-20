@@ -5,6 +5,7 @@ let subTitle = document.querySelector(".sub-title");
 let subLink = document.querySelector(".sub a");
 let headerLinks = document.querySelector(".nav li");
 const btn = document.getElementById("sbm-button");
+const navLink = document.querySelectorAll(".nav-link");
 
 // Opening page animation
 window.addEventListener("DOMContentLoaded", () => {
@@ -45,17 +46,26 @@ setTimeout(function () {
 //  Hamburger menu fade in
 
 const navSlide = () => {
+  const open = false;
+  const line2 = document.querySelector(".hamburger .line2");
   const burger = document.querySelector(".hamburger");
   const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav li");
-  const line2 = document.querySelector(".hamburger .line2");
 
   burger.addEventListener("click", () => {
     line2.classList.toggle("turn");
-    burger.classList.toggle("rotate");
     nav.classList.toggle("nav-active");
+    burger.classList.toggle("rotate");
     navLinks.forEach((link, idx) => {
       link.style.animation = `navLinkFade 0.3s ease forwards ${idx / 7 + 0.3}s`;
+    });
+  });
+  navLink.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("nav-active");
+      burger.classList.toggle("rotate");
+      line2.classList.toggle("turn");
+      console.log("clicked");
     });
   });
 };

@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 .front-page {
@@ -16,23 +17,86 @@ html {
   min-height: 100vh;
 }
 .front-page .header {
+  position: fixed;
+  width: 100%;
   color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 2rem;
-  padding: 30px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  z-index: 9999;
+  background-color: #161616;
 }
-.front-page .header .mini_logo {
+@media all and (max-width: 768px) {
+  .front-page .header .hamburger.rotate {
+    transform: rotate(90deg);
+  }
+  .front-page .header .nav {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    background-color: #161616;
+    z-index: 999;
+    height: 100%;
+  }
+  .front-page .header .nav li {
+    position: relative;
+    z-index: 9999;
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .front-page .header .nav li a {
+    font-size: 1.5rem;
+  }
+  .front-page .header .nav-active {
+    transform: translateX(0%);
+  }
+  .front-page .header .social-media {
+    display: none;
+  }
+}
+.front-page .header .mini_logo a {
+  position: relative;
+  text-decoration: none;
+  color: white;
   display: flex;
   align-items: center;
   font-size: 1.3rem;
   cursor: pointer;
+  z-index: 9999;
+}
+@media all and (min-width: 2040px) {
+  .front-page .header .mini_logo a {
+    font-size: 1.7rem;
+  }
+}
+@media all and (min-width: 1080px) {
+  .front-page .header .mini_logo a {
+    font-size: 1.5rem;
+  }
+}
+.front-page .header .mini_logo a:hover {
+  color: rgb(217, 255, 0);
 }
 .front-page .header ul {
   display: flex;
   list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 .front-page .header ul .red {
   color: orangered;
@@ -48,15 +112,23 @@ html {
 }
 .front-page .header li a {
   text-decoration: none;
-  margin-left: 20px;
+  padding: 0 1.5rem;
   color: white;
+  font-size: 1rem;
 }
 .front-page .header li a:hover {
   color: darkgray;
 }
+@media all and (min-width: 2040px) {
+  .front-page .header li a {
+    font-size: 1.4rem;
+  }
+}
 .front-page .header .hamburger {
+  position: relative;
   display: none;
   cursor: pointer;
+  z-index: 99999;
 }
 .front-page .header .hamburger div {
   width: 16px;
@@ -65,13 +137,33 @@ html {
   margin: 5px;
 }
 .front-page .header .hamburger:hover {
-  color: darkgray;
+  color: orangered;
 }
 .front-page .header .hamburger:focus {
   outline: none;
 }
+@media all and (max-width: 768px) {
+  .front-page .header .hamburger {
+    display: block;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .front-page .header .hamburger .line {
+    transition: all 0.4s ease;
+  }
+  .front-page .header .hamburger .line.turn {
+    transform: rotate(270deg);
+  }
+}
 .front-page .header .social-media a {
   color: white;
+  height: 200px;
+}
+.front-page .header .social-media a:hover {
+  color: orangered;
+}
+.front-page .header .social-media a .svg-inline--fa {
+  font-size: 1.7rem;
 }
 .front-page .home-btn {
   margin-left: 52px;
@@ -196,6 +288,12 @@ html {
     margin-bottom: 2rem;
   }
 }
+@media screen and (max-width: 768px) {
+  .front-page .project-header .text-container .projects-container .row .project .tech-stack-text {
+    margin-bottom: 2.5rem;
+    margin-top: -20px;
+  }
+}
 .front-page .project-header .text-container .projects-container .row.first {
   margin-top: 3rem;
 }
@@ -230,48 +328,6 @@ html {
   }
   .front-page .header .fa-github {
     font-size: 2rem;
-  }
-}
-@media all and (max-width: 768px) {
-  .front-page .header .hamburger {
-    display: block;
-    cursor: pointer;
-    transition: all 0.4s ease-in;
-  }
-  .front-page .header .hamburger .line {
-    transition: all 0.4s ease;
-  }
-  .front-page .header .hamburger .line.turn {
-    transform: rotate(265deg);
-  }
-  .front-page .header .hamburger.rotate {
-    transform: rotate(90deg);
-  }
-  .front-page .header .nav {
-    position: absolute;
-    right: 0px;
-    height: 25vh;
-    top: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in;
-    background-color: #161616;
-  }
-  .front-page .header .nav li {
-    opacity: 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .front-page .header .nav-active {
-    transform: translateX(0%);
-  }
-  .front-page .header .social-media {
-    display: none;
   }
 }
 @keyframes navLinkFade {

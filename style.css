@@ -7,11 +7,12 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
 .intro {
   position: fixed;
-  z-index: 10;
+  z-index: 99999;
   left: 0;
   top: 0;
   width: 100%;
@@ -31,7 +32,12 @@ html {
   display: inline-block;
   bottom: -20px;
   opacity: 0;
-  font-size: 1.7rem;
+  font-size: 2.2rem;
+}
+@media all and (min-width: 2040px) {
+  .intro .logo {
+    font-size: 2.5rem;
+  }
 }
 .intro .logo.active {
   bottom: 0;
@@ -49,6 +55,35 @@ html {
   height: 110vh;
   width: 100%;
 }
+.front-page .bg-img {
+  background: url("./images/pngwing.com.png") fixed;
+  background-position: 0 0;
+  background-size: contain;
+  opacity: 0.008;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  background-repeat: repeat-x;
+  filter: blur(50%) brightness(5%);
+}
+@media all and (max-width: 768px) {
+  .front-page h1 {
+    font-size: 1.5rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .front-page h1 {
+    font-size: 1rem;
+  }
+}
+@media all and (max-width: 350px) {
+  .front-page h1 {
+    font-size: 0.8rem;
+  }
+}
 .front-page .header {
   position: fixed;
   width: 100%;
@@ -58,13 +93,71 @@ html {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 30px;
+  padding: 1rem 2rem;
+  z-index: 9999;
 }
-.front-page .header .mini_logo {
+@media all and (max-width: 768px) {
+  .front-page .header .hamburger.rotate {
+    transform: rotate(90deg);
+  }
+  .front-page .header .nav {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in;
+    background-color: #161616;
+    z-index: 999;
+    height: 100%;
+  }
+  .front-page .header .nav li {
+    position: relative;
+    z-index: 9999;
+    opacity: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .front-page .header .nav li a {
+    font-size: 1.5rem;
+  }
+  .front-page .header .nav-active {
+    transform: translateX(0%);
+  }
+  .front-page .header .social-media {
+    display: none;
+  }
+}
+.front-page .header .mini_logo a {
+  position: relative;
+  text-decoration: none;
+  color: white;
   display: flex;
   align-items: center;
   font-size: 1.3rem;
   cursor: pointer;
+  z-index: 9999;
+}
+@media all and (min-width: 2040px) {
+  .front-page .header .mini_logo a {
+    font-size: 1.7rem;
+  }
+}
+@media all and (min-width: 1080px) {
+  .front-page .header .mini_logo a {
+    font-size: 1.5rem;
+  }
+}
+.front-page .header .mini_logo a:hover {
+  color: rgb(217, 255, 0);
 }
 .front-page .header ul {
   display: flex;
@@ -86,16 +179,23 @@ html {
 }
 .front-page .header li a {
   text-decoration: none;
-  margin-left: 20px;
+  padding: 0 1.5rem;
   color: white;
   font-size: 1rem;
 }
 .front-page .header li a:hover {
   color: darkgray;
 }
+@media all and (min-width: 2040px) {
+  .front-page .header li a {
+    font-size: 1.4rem;
+  }
+}
 .front-page .header .hamburger {
+  position: relative;
   display: none;
   cursor: pointer;
+  z-index: 99999;
 }
 .front-page .header .hamburger div {
   width: 16px;
@@ -109,17 +209,59 @@ html {
 .front-page .header .hamburger:focus {
   outline: none;
 }
+@media all and (max-width: 768px) {
+  .front-page .header .hamburger {
+    display: block;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+  }
+  .front-page .header .hamburger .line {
+    transition: all 0.4s ease;
+  }
+  .front-page .header .hamburger .line.turn {
+    transform: rotate(270deg);
+  }
+}
 .front-page .header .social-media a {
   color: white;
+  height: 200px;
 }
 .front-page .header .social-media a:hover {
   color: orangered;
+}
+.front-page .header .social-media a .svg-inline--fa {
+  font-size: 1.7rem;
 }
 .front-page .logo-main-page {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media all and (min-width: 2040px) {
+  .front-page #svg-logo {
+    width: 900px;
+  }
+}
+@media all and (min-width: 769px) {
+  .front-page #svg-logo {
+    width: 600px;
+  }
+}
+@media all and (max-width: 768px) {
+  .front-page #svg-logo {
+    width: 400px;
+  }
+}
+@media all and (max-width: 500px) {
+  .front-page #svg-logo {
+    width: 300px;
+  }
+}
+@media all and (max-width: 350px) {
+  .front-page #svg-logo {
+    width: 200px;
+  }
 }
 .front-page #svg-logo path:nth-child(2) {
   stroke-dasharray: 453.7;
@@ -177,6 +319,17 @@ html {
   align-items: center;
   flex-direction: column;
   margin-top: 1rem;
+}
+@media all and (min-width: 2040px) {
+  .front-page .sub {
+    margin-top: 1.3rem;
+  }
+}
+@media all and (min-width: 1080px) {
+  .front-page .sub {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
 }
 .front-page .sub .sub-title {
   color: #fff;
@@ -297,6 +450,44 @@ html {
   background-color: #161616;
   color: white;
   min-height: 100vh;
+  position: relative;
+}
+@media all and (min-width: 2040px) {
+  .project-page {
+    font-size: 1.4rem;
+  }
+}
+.project-page .floating-img {
+  position: absolute;
+  height: 300px;
+  opacity: 0.3;
+}
+@media screen and (max-width: 1350px) {
+  .project-page .floating-img {
+    opacity: 0.1;
+  }
+}
+.project-page .floating-img.face1 {
+  right: 5%;
+  bottom: 10%;
+}
+@media screen and (max-width: 600px) {
+  .project-page .floating-img.face1 {
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+  }
+}
+.project-page .floating-img.face2 {
+  transform: rotate(180deg);
+  left: 5%;
+  top: 20%;
+}
+@media screen and (max-width: 600px) {
+  .project-page .floating-img.face2 {
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
 }
 .project-page .title {
   padding: 1rem;
@@ -304,15 +495,40 @@ html {
   text-align: center;
   padding-top: 4rem;
 }
+@media all and (min-width: 2040px) {
+  .project-page .title {
+    font-size: 3rem;
+  }
+}
+@media all and (min-width: 1080px) {
+  .project-page .title {
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
+}
 .project-page .title .red {
   color: orangered;
 }
-.project-page #projects {
+@media all and (max-width: 600px) {
+  .project-page .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.project-page .project-container #projects {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.project-page #projects .square {
+@media all and (max-width: 600px) {
+  .project-page .project-container #projects {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.project-page .project-container #projects .square {
   position: relative;
   width: 300px;
   height: 300px;
@@ -321,7 +537,25 @@ html {
   align-items: center;
   margin: 2rem 2rem;
 }
-.project-page #projects .square span:nth-child(1) {
+@media all and (min-width: 2040px) {
+  .project-page .project-container #projects .square {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media all and (max-width: 600px) {
+  .project-page .project-container #projects .square {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media all and (max-width: 500px) {
+  .project-page .project-container #projects .square {
+    height: 200px;
+    width: 200px;
+  }
+}
+.project-page .project-container #projects .square span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
@@ -331,10 +565,10 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 6s linear infinite;
 }
-.project-page #projects .square:hover span:nth-child(1) {
+.project-page .project-container #projects .square:hover span:nth-child(1) {
   animation-play-state: paused;
 }
-.project-page #projects .square span:nth-child(2) {
+.project-page .project-container #projects .square span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
@@ -344,10 +578,10 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 4s linear infinite;
 }
-.project-page #projects .square:hover span:nth-child(2) {
+.project-page .project-container #projects .square:hover span:nth-child(2) {
   animation-play-state: paused;
 }
-.project-page #projects .square span:nth-child(3) {
+.project-page .project-container #projects .square span:nth-child(3) {
   position: absolute;
   top: 0;
   left: 0;
@@ -357,54 +591,59 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 8s linear infinite;
 }
-.project-page #projects .square:hover span:nth-child(3) {
+.project-page .project-container #projects .square:hover span:nth-child(3) {
   animation-play-state: paused;
 }
-.project-page #projects .square .content {
+.project-page .project-container #projects .square .content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9;
 }
-.project-page #projects .square .content a {
+.project-page .project-container #projects .square .content a {
   text-decoration: none;
   color: white;
 }
-.project-page #projects .square .content img {
+.project-page .project-container #projects .square .content img {
   visibility: hidden;
   height: 100px;
   position: absolute;
   border: 1px solid white;
   z-index: 0;
 }
-.project-page #projects .square .content .project-links {
+.project-page .project-container #projects .square .content .project-links {
   transition: all 0.3s ease;
 }
-.project-page #projects .square .content .project-links:hover {
+.project-page .project-container #projects .square .content .project-links:hover {
   transform: scale(1.05);
 }
-.project-page #projects .square .content .view-project {
+.project-page .project-container #projects .square .content .view-project {
   color: rgb(217, 255, 0);
   padding: 5px;
 }
-.project-page #projects .square .content .view-project:hover {
+.project-page .project-container #projects .square .content .view-project:hover {
   color: orangered;
 }
-.project-page #projects .square .content .red {
+.project-page .project-container #projects .square .content .red {
   color: orangered;
 }
-.project-page #projects .square .content .red:hover {
+.project-page .project-container #projects .square .content .red:hover {
   color: rgb(217, 255, 0);
 }
-.project-page #projects .square .content .project-title {
+.project-page .project-container #projects .square .content .project-title {
   text-decoration: none;
   padding: 5px;
   transition: all 0.2s ease;
 }
-.project-page #projects .square .content .project-title:hover {
+.project-page .project-container #projects .square .content .project-title:hover {
   color: rgb(155, 155, 155);
   transform: scale(1.1);
+}
+@media all and (min-width: 2040px) {
+  .project-page .project-container #projects .square .content .project-title a {
+    font-size: 2rem;
+  }
 }
 
 @keyframes animate {
@@ -428,10 +667,27 @@ html {
   width: 60%;
   margin: auto;
   padding: 3rem;
+  position: relative;
+}
+.about-me-section .about-me-container .bar-code-img {
+  position: absolute;
+  height: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+.about-me-section .about-me-container .bar-code-img.img1 {
+  top: 0;
 }
 @media screen and (max-height: 768px) {
   .about-me-section .about-me-container {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .about-me-section .about-me-container {
+    width: 100%;
+    margin: 2rem 0;
   }
 }
 .about-me-section .about-me-container h1 {
@@ -442,6 +698,12 @@ html {
 }
 .about-me-section .about-me-container h1 .yellow:hover {
   color: orangered;
+}
+@media all and (min-width: 2040px) {
+  .about-me-section .about-me-container h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
 .about-me-section .about-me-container p {
   margin-top: 2rem;
@@ -459,6 +721,11 @@ html {
 .about-me-section .about-me-container p .red:hover {
   color: orangered;
   text-decoration: underline;
+}
+@media all and (min-width: 2040px) {
+  .about-me-section .about-me-container p {
+    font-size: 1.6rem;
+  }
 }
 
 .contact-page {
@@ -480,16 +747,56 @@ html {
   padding: 2rem 32px;
   overflow: none;
 }
+@media all and (min-width: 2040px) {
+  .contact-page .contact-container {
+    padding: 0 128px;
+    max-width: 2000px;
+  }
+}
+@media all and (min-width: 768px) {
+  .contact-page .contact-container {
+    padding: 0 64px;
+  }
+}
+@media all and (max-width: 600px) {
+  .contact-page .contact-container {
+    padding-top: 5rem;
+  }
+}
+@media all and (max-width: 450px) {
+  .contact-page .contact-container {
+    padding-top: 1rem;
+  }
+  .contact-page .contact-container h1 {
+    padding-top: 1rem;
+  }
+  .contact-page .contact-container form {
+    padding-top: 1rem;
+  }
+  .contact-page .contact-container p {
+    display: none;
+  }
+}
 .contact-page .contact-container h1 {
   font-size: 1.6rem;
   text-align: center;
   margin-bottom: 1rem;
+}
+@media all and (max-width: 450px) {
+  .contact-page .contact-container h1 {
+    padding-top: 1rem;
+  }
 }
 .contact-page .contact-container p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: lightgray;
   text-align: center;
+}
+@media all and (max-width: 450px) {
+  .contact-page .contact-container p {
+    display: none;
+  }
 }
 .contact-page .contact-container p .red {
   color: orangered;
@@ -506,10 +813,25 @@ html {
   border-radius: 1rem;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
+@media all and (min-width: 768px) {
+  .contact-page .contact-container form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (max-width: 450px) {
+  .contact-page .contact-container form {
+    padding-top: 1rem;
+  }
+}
 .contact-page .contact-container form .form-group label {
   display: block;
   margin-bottom: 5px;
   color: lightgray;
+}
+@media all and (min-width: 2040px) {
+  .contact-page .contact-container form .form-group label {
+    font-size: 1.6rem;
+  }
 }
 .contact-page .contact-container form .form-group label .yellow {
   color: rgb(217, 255, 0);
@@ -522,6 +844,11 @@ html {
 }
 .contact-page .contact-container form .form-group label .red:hover {
   color: rgb(217, 255, 0);
+}
+@media all and (min-width: 2040px) {
+  .contact-page .contact-container form .form-group input {
+    font-size: 1.6rem;
+  }
 }
 .contact-page .contact-container form .form-group .form-element {
   -webkit-appearance: none;
@@ -569,46 +896,7 @@ html {
   background-color: rgb(217, 255, 0);
 }
 
-@media all and (min-width: 768px) {
-  .contact-page .contact-container {
-    padding: 0 64px;
-  }
-  .contact-page .contact-container form {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media all and (min-width: 2040px) {
-  .intro .logo {
-    font-size: 2.5rem;
-  }
-  .front-page .header .mini_logo {
-    font-size: 1.7rem;
-  }
-  .front-page .header li a {
-    font-size: 1.4rem;
-  }
-  .front-page .header .fa-github {
-    font-size: 2rem;
-  }
-  .front-page #svg-logo {
-    width: 900px;
-  }
-  .front-page .sub {
-    margin-top: 1.3rem;
-  }
-  .project-page {
-    font-size: 1.4rem;
-  }
-  .project-page .title {
-    font-size: 3rem;
-  }
-  .project-page #projects .square {
-    width: 500px;
-    height: 500px;
-  }
-  .project-page #projects .square .project-title a {
-    font-size: 2rem;
-  }
   .about-me-section .about-me-container h1 {
     font-size: 3rem;
     text-align: center;
@@ -616,183 +904,16 @@ html {
   .about-me-section .about-me-container p {
     font-size: 1.6rem;
   }
-  .contact-page .contact-container {
-    padding: 0 128px;
-    max-width: 2000px;
-  }
-  .contact-page .contact-container h1 {
-    font-size: 3rem;
-  }
-  .contact-page .contact-container p {
+  .contact-container form .form-group label {
     font-size: 1.6rem;
   }
-  .contact-page .contact-container .form-group label {
-    font-size: 1.6rem;
-  }
-  .contact-page .contact-container .form-group input {
+  .contact-container form .form-group input {
     font-size: 1.6rem;
   }
 }
-@media all and (min-width: 2040px) {
-  .fa-github {
-    font-size: 2rem;
-  }
-}
-@media all and (min-width: 1080px) {
-  .fa-github {
-    font-size: 1.2rem;
-    margin-left: 2rem;
-  }
-  .project-page .title {
-    padding-top: 1rem;
-    font-size: 2rem;
-  }
-  .header .mini_logo {
-    font-size: 1.7rem;
-  }
-  .header li a {
-    font-size: 1.4rem;
-  }
-  .sub {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-  }
-}
-@media all and (min-width: 769px) {
-  #svg-logo {
-    width: 600px;
-  }
-}
-@media all and (max-width: 768px) {
-  .front-page h1 {
-    font-size: 1.5rem;
-  }
-  .front-page .header nav .hamburger {
-    display: block;
-    cursor: pointer;
-    transition: all 0.4s ease-in;
-  }
-  .front-page .header nav .hamburger .line {
-    transition: all 0.4s ease;
-  }
-  .front-page .header nav .hamburger .line.turn {
-    transform: rotate(270deg);
-  }
-  .front-page .header nav .hamburger.rotate {
-    transform: rotate(90deg);
-  }
-  .front-page .header nav .nav {
-    position: absolute;
-    right: 0px;
-    top: 0;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    z-index: 9999;
-  }
-  .front-page .header nav .nav li {
-    position: relative;
-    z-index: 9999;
-    opacity: 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .front-page .header nav .nav-active {
-    transform: translateX(0%);
-  }
-  .front-page .header .social-media {
-    display: none;
-  }
-  .front-page #svg-logo {
-    width: 400px;
-  }
-  .project-page #projects .square {
-    width: 280px;
-    height: 280px;
-  }
-  .project-page #projects .square .content .project-title {
-    font-size: 1.2rem;
-  }
-  .about-me-section {
-    min-height: 150vh;
-  }
-  .about-me-section .about-me-container {
-    width: 100%;
-    margin: 2rem 0;
-  }
-  .contact-page .contact-container {
-    margin: 3rem 0 2rem 0;
-  }
-  .contact-page .contact-container h1 {
-    font-size: 1.5rem;
-  }
-  .contact-page .contact-container .form-group .form-element {
-    padding: 0.4rem 0.5rem;
-  }
-  .contact-page .contact-container .form-group .submit-group input[type=submit] {
-    padding: 0.4rem 0.5rem;
-  }
-}
-@media all and (max-width: 600px) {
-  .project-page .project-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .project-page .project-container #projects {
-    display: flex;
-    flex-direction: column;
-  }
-  .project-page .project-container #projects .square {
-    width: 250px;
-    height: 250px;
-  }
-  .project-page .project-container #projects .square .content .project-title {
-    font-size: 1.2rem;
-  }
-  .contact-page .contact-container {
-    padding-top: 5rem;
-  }
-}
-@media all and (max-width: 500px) {
-  .front-page h1 {
-    font-size: 1rem;
-  }
-  .front-page #svg-logo {
-    width: 300px;
-  }
-  .project-page .square {
-    height: 200px;
-    width: 200px;
-  }
-}
-@media all and (max-width: 450px) {
-  .contact-page .contact-container {
-    padding-top: 1rem;
-  }
-  .contact-page .contact-container h1 {
-    padding-top: 1rem;
-  }
-  .contact-page .contact-container form {
-    padding-top: 1rem;
-  }
-  .contact-page .contact-container p {
-    display: none;
-  }
-}
-@media all and (max-width: 350px) {
-  .front-page h1 {
-    font-size: 0.8rem;
-  }
-  .front-page #svg-logo {
-    width: 200px;
+@media all and (min-width: 2040px) and (min-width: 768px) {
+  .contact-container form form {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @keyframes navLinkFade {
