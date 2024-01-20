@@ -16,6 +16,9 @@ $main-bg-color: #161616;
 $yellow-clr: rgb(217, 255, 0);
 $red-clr: orangered;
 
+body {
+}
+
 // intro animation page
 
 .intro {
@@ -41,7 +44,7 @@ $red-clr: orangered;
     display: inline-block;
     bottom: -20px;
     opacity: 0;
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     @media all and (min-width: 2040px) {
       font-size: 2.5rem;
     }
@@ -66,6 +69,21 @@ $red-clr: orangered;
   background: #161616;
   height: 110vh;
   width: 100%;
+  .bg-img {
+    background: url("./images/pngwing.com.png") fixed;
+    background-position: 0 0;
+    background-size: contain;
+    opacity: 0.008;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    // z-index: -1;
+    height: 100%;
+    background-repeat: repeat-x;
+    filter: blur(50%) brightness(5%);
+  }
 
   h1 {
     @media all and (max-width: 768px) {
@@ -93,7 +111,7 @@ $red-clr: orangered;
     margin: 0 auto;
     padding: 1rem 2rem;
     z-index: 9999;
-    background-color: #161616;
+    // background-color: #161616;
 
     @media all and (max-width: 768px) {
       .hamburger.rotate {
@@ -119,7 +137,6 @@ $red-clr: orangered;
         height: 100%;
 
         li {
-          // line-height: 20px;
           position: relative;
           z-index: 9999;
           opacity: 0;
@@ -155,7 +172,7 @@ $red-clr: orangered;
           font-size: 1.7rem;
         }
         @media all and (min-width: 1080px) {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
         &:hover {
           color: $yellow-clr;
@@ -382,8 +399,6 @@ $red-clr: orangered;
       text-decoration: none;
       padding: 0.4rem 0.5rem;
       border: 1px solid white;
-      //background: linear-gradient(to right, $red-clr, $yellow-clr);
-      //background: white;
       border-radius: 10px;
       margin-top: 0.8rem;
       transition: 0.2s linear;
@@ -392,7 +407,6 @@ $red-clr: orangered;
       font-size: 1rem;
 
       &:hover {
-        //background: linear-gradient(to right, $yellow-clr, $red-clr);
         background: white;
         color: #000;
         transform: scale(1.05);
@@ -467,8 +481,37 @@ $red-clr: orangered;
   background-color: $main-bg-color;
   color: white;
   min-height: 100vh;
+  position: relative;
   @media all and (min-width: 2040px) {
     font-size: 1.4rem;
+  }
+
+  .floating-img {
+    position: absolute;
+    height: 300px;
+    opacity: 0.3;
+    // left: 5%;
+    @media screen and (max-width: 1350px) {
+      opacity: 0.1;
+    }
+  }
+  .floating-img.face1 {
+    right: 5%;
+    bottom: 10%;
+    @media screen and (max-width: 600px) {
+      left: 50%;
+      right: 0;
+      transform: translateX(-50%);
+    }
+  }
+  .floating-img.face2 {
+    transform: rotate(180deg);
+    left: 5%;
+    top: 20%;
+    @media screen and (max-width: 600px) {
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+    }
   }
 
   .title {
@@ -658,6 +701,21 @@ $red-clr: orangered;
     width: 60%;
     margin: auto;
     padding: 3rem;
+    position: relative;
+
+    .bar-code-img {
+      position: absolute;
+      height: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.5;
+      @media screen and (max-width: 768px) {
+        // display: none;
+      }
+    }
+    .bar-code-img.img1 {
+      top: 0;
+    }
 
     @media screen and (max-height: 768px) {
       width: 100%;
