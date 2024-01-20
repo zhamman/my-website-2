@@ -301,6 +301,12 @@ $red-clr: orangered;
                 margin-bottom: 2rem;
               }
             }
+            .tech-stack-text {
+              @media screen and (max-width: 768px) {
+                margin-bottom: 2.5rem;
+                margin-top: -20px;
+              }
+            }
           }
           &.first {
             margin-top: 3rem;
