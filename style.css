@@ -509,6 +509,10 @@ html {
 .project-page .title .red {
   color: orangered;
 }
+.project-page .project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 @media all and (max-width: 600px) {
   .project-page .project-container {
     display: flex;
@@ -517,18 +521,13 @@ html {
     flex-direction: column;
   }
 }
-.project-page .project-container #projects {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 @media all and (max-width: 600px) {
-  .project-page .project-container #projects {
+  .project-page .project-container .projects {
     display: flex;
     flex-direction: column;
   }
 }
-.project-page .project-container #projects .square {
+.project-page .project-container .projects .square {
   position: relative;
   width: 300px;
   height: 300px;
@@ -538,24 +537,24 @@ html {
   margin: 2rem 2rem;
 }
 @media all and (min-width: 2040px) {
-  .project-page .project-container #projects .square {
+  .project-page .project-container .projects .square {
     width: 500px;
     height: 500px;
   }
 }
 @media all and (max-width: 600px) {
-  .project-page .project-container #projects .square {
+  .project-page .project-container .projects .square {
     width: 250px;
     height: 250px;
   }
 }
 @media all and (max-width: 500px) {
-  .project-page .project-container #projects .square {
+  .project-page .project-container .projects .square {
     height: 200px;
     width: 200px;
   }
 }
-.project-page .project-container #projects .square span:nth-child(1) {
+.project-page .project-container .projects .square span:nth-child(1) {
   position: absolute;
   top: 0;
   left: 0;
@@ -565,10 +564,10 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 6s linear infinite;
 }
-.project-page .project-container #projects .square:hover span:nth-child(1) {
+.project-page .project-container .projects .square:hover span:nth-child(1) {
   animation-play-state: paused;
 }
-.project-page .project-container #projects .square span:nth-child(2) {
+.project-page .project-container .projects .square span:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
@@ -578,10 +577,10 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 4s linear infinite;
 }
-.project-page .project-container #projects .square:hover span:nth-child(2) {
+.project-page .project-container .projects .square:hover span:nth-child(2) {
   animation-play-state: paused;
 }
-.project-page .project-container #projects .square span:nth-child(3) {
+.project-page .project-container .projects .square span:nth-child(3) {
   position: absolute;
   top: 0;
   left: 0;
@@ -591,57 +590,65 @@ html {
   border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
   animation: animate 8s linear infinite;
 }
-.project-page .project-container #projects .square:hover span:nth-child(3) {
+.project-page .project-container .projects .square:hover span:nth-child(3) {
   animation-play-state: paused;
 }
-.project-page .project-container #projects .square .content {
+.project-page .project-container .projects .square .content {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 9;
 }
-.project-page .project-container #projects .square .content a {
+.project-page .project-container .projects .square .content div:nth-child(even) {
+  color: var(orangered);
+}
+.project-page .project-container .projects .square .content div:nth-child(odd) {
+  color: var(rgb(217, 255, 0));
+}
+.project-page .project-container .projects .square .content a {
   text-decoration: none;
   color: white;
 }
-.project-page .project-container #projects .square .content img {
+.project-page .project-container .projects .square .content img {
   visibility: hidden;
   height: 100px;
   position: absolute;
   border: 1px solid white;
   z-index: 0;
 }
-.project-page .project-container #projects .square .content .project-links {
+.project-page .project-container .projects .square .content .project-links {
   transition: all 0.3s ease;
 }
-.project-page .project-container #projects .square .content .project-links:hover {
+.project-page .project-container .projects .square .content .project-links:hover {
   transform: scale(1.05);
 }
-.project-page .project-container #projects .square .content .view-project {
-  color: rgb(217, 255, 0);
-  padding: 5px;
-}
-.project-page .project-container #projects .square .content .view-project:hover {
+.project-page .project-container .projects .square .content .view-project:hover {
   color: orangered;
 }
-.project-page .project-container #projects .square .content .red {
-  color: orangered;
-}
-.project-page .project-container #projects .square .content .red:hover {
+.project-page .project-container .projects .square .content .yellow {
   color: rgb(217, 255, 0);
 }
-.project-page .project-container #projects .square .content .project-title {
+.project-page .project-container .projects .square .content .yellow:hover {
+  color: orangered;
+}
+.project-page .project-container .projects .square .content .red {
+  color: orangered;
+}
+.project-page .project-container .projects .square .content .red:hover {
+  color: rgb(217, 255, 0);
+}
+.project-page .project-container .projects .square .content .project-title {
   text-decoration: none;
   padding: 5px;
   transition: all 0.2s ease;
 }
-.project-page .project-container #projects .square .content .project-title:hover {
+.project-page .project-container .projects .square .content .project-title:hover {
   color: rgb(155, 155, 155);
   transform: scale(1.1);
 }
 @media all and (min-width: 2040px) {
-  .project-page .project-container #projects .square .content .project-title a {
+  .project-page .project-container .projects .square .content .project-title a {
     font-size: 2rem;
   }
 }

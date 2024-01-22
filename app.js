@@ -31,8 +31,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Front page Animations
-
 // subtitle animation
 
 setTimeout(function () {
@@ -71,6 +69,58 @@ const navSlide = () => {
 };
 
 navSlide();
+
+// Projects Render
+
+const homeProjectContainer = document.querySelector(".project-container");
+
+const homeProjectData = [
+  {
+    title: "Blossom Café",
+    link: "/project-page2/project2.html",
+    class: "yellow",
+  },
+  {
+    title: "Gung-Ho",
+    link: "/project-page3/project3.html",
+    class: "red",
+  },
+  {
+    title: "JobTrackr",
+    link: "/project-page/project1.html",
+    class: "red",
+  },
+  {
+    title: "All Projects",
+    link: "/project-page4/project4.html",
+    class: "yellow",
+  },
+];
+
+const homeProjectRender = () => {
+  homeProjectData.map((project, i) => {
+    const homeProject = document.createElement("div");
+    homeProject.classList.add("projects");
+    homeProject.innerHTML = `<div class="square">
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="content">
+      <a class="project-title" href=${project.link}>
+        ${project.title}</a
+      >
+      <div class="project-links">
+        <a class="view-project ${project.class}" href=${project.link}
+          >>>>View Project</a
+        >
+      </div>
+    </div>
+  </div>`;
+    homeProjectContainer.appendChild(homeProject);
+  });
+};
+
+homeProjectRender();
 
 // form Submit
 
