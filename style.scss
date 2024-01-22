@@ -16,9 +16,6 @@ $main-bg-color: #161616;
 $yellow-clr: rgb(217, 255, 0);
 $red-clr: orangered;
 
-body {
-}
-
 // intro animation page
 
 .intro {
@@ -538,12 +535,10 @@ body {
       align-items: center;
       flex-direction: column;
     }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    #projects {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
+    .projects {
       @media all and (max-width: 600px) {
         display: flex;
         flex-direction: column;
@@ -621,6 +616,14 @@ body {
           align-items: center;
           flex-direction: column;
           z-index: 9;
+          div {
+            &:nth-child(even) {
+              color: var($red-clr);
+            }
+            &:nth-child(odd) {
+              color: var($yellow-clr);
+            }
+          }
 
           a {
             text-decoration: none;
@@ -636,13 +639,21 @@ body {
           }
           .project-links {
             transition: all 0.3s ease;
+
             &:hover {
               transform: scale(1.05);
             }
           }
           .view-project {
+            // color: $yellow-clr;
+            // padding: 5px;
+
+            &:hover {
+              color: $red-clr;
+            }
+          }
+          .yellow {
             color: $yellow-clr;
-            padding: 5px;
 
             &:hover {
               color: $red-clr;
