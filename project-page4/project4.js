@@ -121,10 +121,10 @@ const projectRender = () => {
     <div class="image ${project.sClass}">
         <img src=${project.image} alt="" />
       <div class="cover">
-        <a href=${project.link1}
+        <a href=${project.link1} target="_blank"
           ><span class="yellow">${project.link1Text}</span>
         </a>
-        <a href=${project.link2}
+        <a href=${project.link2} target="_blank"
           ><span class="red">${project.link2Text}</span></a
         >
       </div>
@@ -132,10 +132,10 @@ const projectRender = () => {
     <div class="description">${project.description}</div>
     
     <div class="mobile-links">
-    <a href=${project.link1}
+    <a href=${project.link1} target="_blank"
       ><span class="red">${project.link1Text}</span>
     </a>
-    <a href=${project.link2}
+    <a href=${project.link2} target="_blank"
       ><span class="yellow">${project.link2Text}</span></a
     >
     </div>`;

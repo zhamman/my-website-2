@@ -106,7 +106,7 @@ const homeProjectRender = () => {
     <span></span>
     <span></span>
     <div class="content">
-      <a class="project-title" href=${project.link}>
+      <a class="project-title"  href=${project.link}>
         ${project.title}</a
       >
       <div class="project-links">
