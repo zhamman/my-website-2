@@ -28,6 +28,9 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       intro.style.top = "-100vh";
     }, 2000);
+    setTimeout(() => {
+      intro.style = "display: none";
+    }, 2500);
   });
 });
 

@@ -19,7 +19,7 @@ navSlide();
 const projectData = [
   {
     title: "Blossom Café",
-    image: "/images/blossom-cafe.png",
+    image: "/images/blossom-cafe.WebP",
     link1: "https://github.com/zhamman/blossom-cafe/tree/full-site-update",
     link1Text: "Github",
     link2: "https://tangerine-pixie-ffd683.netlify.app/",
@@ -30,7 +30,7 @@ const projectData = [
   },
   {
     title: "Gung-Ho Films",
-    image: "/images/gung-ho.png",
+    image: "/images/gung-ho.WebP",
     link1: "https://github.com/zhamman/gung-ho",
     link1Text: "Github",
     link2: "https://gung-ho.netlify.app/",
@@ -41,7 +41,7 @@ const projectData = [
   },
   {
     title: "Job Trackr",
-    image: "/images/jobtrackr-img.png",
+    image: "/images/jobtrackr-img.WebP",
     link1: "https://github.com/zhamman/JobTrackr",
     link1Text: "Github",
     link2: "https://jobtrackr.online/",
@@ -52,7 +52,7 @@ const projectData = [
   },
   {
     title: "Miles Mazel",
-    image: "/images/miles-mazel.png",
+    image: "/images/miles-mazel.WebP",
     link1: "https://github.com/zhamman/Miles-site-rework",
     link1Text: "Github",
     link2: "https://milesmazel.netlify.app/",
@@ -63,7 +63,7 @@ const projectData = [
   },
   {
     title: "My Portfolio",
-    image: "/images/zach-hamman-portfolio.png",
+    image: "/images/zach-hamman-portfolio.WebP",
     link1: "https://github.com/zhamman/my-website-2",
     link1Text: "Github",
     link2: "../index.html",
@@ -74,7 +74,7 @@ const projectData = [
   },
   {
     title: "Ip Adress Tracker",
-    image: "/images/ip-address.png",
+    image: "/images/ip-address.WebP",
     link1: "https://github.com/zhamman/ip-address-tracker",
     link1Text: "Github",
     link2: "https://iptracker-webapp.netlify.app/",
@@ -85,7 +85,7 @@ const projectData = [
   },
   {
     title: "Sneaker Shop",
-    image: "/images/sneaker-shop.png",
+    image: "/images/sneaker-shop.WebP",
     link1: "https://github.com/zhamman/sneaker-shop-site",
     link1Text: "Github",
     link2: "https://sneakrshop.netlify.app/",
@@ -96,7 +96,7 @@ const projectData = [
   },
   {
     title: "Tip Calculator",
-    image: "/images/tip-calc.png",
+    image: "/images/tip-calc.WebP",
     link1: "https://github.com/zhamman/tip-calculator",
     link1Text: "Github",
     link2: "https://gratuity-calc.netlify.app/",
