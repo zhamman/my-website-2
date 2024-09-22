@@ -29,6 +29,17 @@ const projectData = [
     sClass: "",
   },
   {
+    title: "Pooti",
+    image: "/images/pooti-ss.WebP",
+    link1: "https://github.com/zhamman/",
+    link1Text: "Github",
+    link2: "https://pootigang.com/",
+    link2Text: "Live Site",
+    description: "Cryto token website",
+    techStack: "React",
+    sClass: "",
+  },
+  {
     title: "Gung-Ho Films",
     image: "/images/gung-ho.WebP",
     link1: "https://github.com/zhamman/gung-ho",

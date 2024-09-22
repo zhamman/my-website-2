@@ -89,7 +89,7 @@ const homeProjectData = [
     class: "red",
   },
   {
-    title: "JobTrackr",
+    title: "Pooti",
     link: "/project-page/project1.html",
     class: "red",
   },
